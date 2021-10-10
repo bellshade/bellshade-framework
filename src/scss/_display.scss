@@ -1,0 +1,160 @@
+$display: block, contents, flex, flex-root, grid, inherit, initial, inline,
+    inline-block, inline-flex, inline-grid, inline-table, list-item, none,
+    revert, table, table-caption, table-cell, table-column, table-column-group,
+    table-footer-group, table-header-group, table-row, table-row-group, unset,
+    -webkit-box, -webkit-inline-box;
+
+@each $dis in $display {
+    .#{$dis} {
+        display: $dis;
+    }
+}
+
+// Flex Box
+$justify-content-values: (
+    "center": center,
+    "end": end,
+    "flex-end": flex-end,
+    "flex-start": flex-start,
+    "inherit": inherit,
+    "initial": initial,
+    "left": left,
+    "normal": normal,
+    "revert": revert,
+    "right": right,
+    "around": space-around,
+    "between": space-between,
+    "evenly": space-evenly,
+    "start": start,
+    "stretch": stretch,
+    "unset": unset
+) !default;
+
+@each $key, $position in $justify-content-values {
+    .jc-#{$key} {
+        justify-content: $position;
+    }
+}
+
+$justify-self-values: (
+    "auto": auto,
+    "baseline": baseline,
+    "center": center,
+    "end": end,
+    "flex-end": flex-end,
+    "flex-start": flex-start,
+    "inherit": inherit,
+    "initial": initial,
+    "left": left,
+    "normal": normal,
+    "revert": revert,
+    "right": right,
+    "self-end": self-end,
+    "self-start": self-start,
+    "start": start,
+    "stretch": stretch,
+    "unset": unset
+) !default;
+
+@each $key, $position in $justify-self-values {
+    .js-#{$key} {
+        justify-self: $position;
+    }
+}
+
+$justify-items-values: (
+    "baseline": baseline,
+    "center": center,
+    "end": end,
+    "flex-end": flex-end,
+    "flex-start": flex-start,
+    "inherit": inherit,
+    "initial": initial,
+    "left": left,
+    "legacy": legacy,
+    "normal": normal,
+    "revert": revert,
+    "right": right,
+    "self-end": self-end,
+    "self-start": self-start,
+    "start": start,
+    "stretch": stretch,
+    "unset": unset
+) !default;
+
+@each $key, $position in $justify-items-values {
+    .ji-#{$key} {
+        justify-items: $position;
+    }
+}
+
+$align-content-values: (
+    "baseline": baseline,
+    "center": center,
+    "end": end,
+    "flex-end": flex-end,
+    "flex-start": flex-start,
+    "inherit": inherit,
+    "initial": initial,
+    "normal": normal,
+    "revert": revert,
+    "around": space-around,
+    "between": space-between,
+    "evenly": space-evenly,
+    "start": start,
+    "stretch": stretch,
+    "unset": unset
+) !default;
+
+@each $key, $position in $align-content-values {
+    .ac-#{$key} {
+        align-content: $position;
+    }
+}
+
+$align-items-values: (
+    "baseline": baseline,
+    "center": center,
+    "end": end,
+    "flex-end": flex-end,
+    "flex-start": flex-start,
+    "inherit": inherit,
+    "initial": initial,
+    "normal": normal,
+    "revert": revert,
+    "self-end": self-end,
+    "self-start": self-start,
+    "start": start,
+    "stretch": stretch,
+    "unset": unset
+) !default;
+
+@each $key, $position in $align-items-values {
+    .ai-#{$key} {
+        align-items: $position;
+    }
+}
+
+$align-self-values: (
+    "auto": auto,
+    "baseline": baseline,
+    "center": center,
+    "end": end,
+    "flex-end": flex-end,
+    "flex-start": flex-start,
+    "inherit": inherit,
+    "initial": initial,
+    "normal": normal,
+    "revert": revert,
+    "self-end": self-end,
+    "self-start": self-start,
+    "start": start,
+    "stretch": stretch,
+    "unset": unset
+) !default;
+
+@each $key, $position in $align-self-values {
+    .ai-#{$key} {
+        align-self: $position;
+    }
+}

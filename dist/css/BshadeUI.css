@@ -6866,4 +6866,488 @@
   border-radius: 50rem !important;
 }
 
+.block {
+  display: block;
+}
+
+.contents {
+  display: contents;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-root {
+  display: flex-root;
+}
+
+.grid {
+  display: grid;
+}
+
+.inherit {
+  display: inherit;
+}
+
+.initial {
+  display: initial;
+}
+
+.inline {
+  display: inline;
+}
+
+.inline-block {
+  display: inline-block;
+}
+
+.inline-flex {
+  display: inline-flex;
+}
+
+.inline-grid {
+  display: inline-grid;
+}
+
+.inline-table {
+  display: inline-table;
+}
+
+.list-item {
+  display: list-item;
+}
+
+.none {
+  display: none;
+}
+
+.revert {
+  display: revert;
+}
+
+.table {
+  display: table;
+}
+
+.table-caption {
+  display: table-caption;
+}
+
+.table-cell {
+  display: table-cell;
+}
+
+.table-column {
+  display: table-column;
+}
+
+.table-column-group {
+  display: table-column-group;
+}
+
+.table-footer-group {
+  display: table-footer-group;
+}
+
+.table-header-group {
+  display: table-header-group;
+}
+
+.table-row {
+  display: table-row;
+}
+
+.table-row-group {
+  display: table-row-group;
+}
+
+.unset {
+  display: unset;
+}
+
+.-webkit-box {
+  display: -webkit-box;
+}
+
+.-webkit-inline-box {
+  display: -webkit-inline-box;
+}
+
+.jc-center {
+  justify-content: center;
+}
+
+.jc-end {
+  justify-content: end;
+}
+
+.jc-flex-end {
+  justify-content: flex-end;
+}
+
+.jc-flex-start {
+  justify-content: flex-start;
+}
+
+.jc-inherit {
+  justify-content: inherit;
+}
+
+.jc-initial {
+  justify-content: initial;
+}
+
+.jc-left {
+  justify-content: left;
+}
+
+.jc-normal {
+  justify-content: normal;
+}
+
+.jc-revert {
+  justify-content: revert;
+}
+
+.jc-right {
+  justify-content: right;
+}
+
+.jc-around {
+  justify-content: space-around;
+}
+
+.jc-between {
+  justify-content: space-between;
+}
+
+.jc-evenly {
+  justify-content: space-evenly;
+}
+
+.jc-start {
+  justify-content: start;
+}
+
+.jc-stretch {
+  justify-content: stretch;
+}
+
+.jc-unset {
+  justify-content: unset;
+}
+
+.js-auto {
+  justify-self: auto;
+}
+
+.js-baseline {
+  justify-self: baseline;
+}
+
+.js-center {
+  justify-self: center;
+}
+
+.js-end {
+  justify-self: end;
+}
+
+.js-flex-end {
+  justify-self: flex-end;
+}
+
+.js-flex-start {
+  justify-self: flex-start;
+}
+
+.js-inherit {
+  justify-self: inherit;
+}
+
+.js-initial {
+  justify-self: initial;
+}
+
+.js-left {
+  justify-self: left;
+}
+
+.js-normal {
+  justify-self: normal;
+}
+
+.js-revert {
+  justify-self: revert;
+}
+
+.js-right {
+  justify-self: right;
+}
+
+.js-self-end {
+  justify-self: self-end;
+}
+
+.js-self-start {
+  justify-self: self-start;
+}
+
+.js-start {
+  justify-self: start;
+}
+
+.js-stretch {
+  justify-self: stretch;
+}
+
+.js-unset {
+  justify-self: unset;
+}
+
+.ji-baseline {
+  justify-items: baseline;
+}
+
+.ji-center {
+  justify-items: center;
+}
+
+.ji-end {
+  justify-items: end;
+}
+
+.ji-flex-end {
+  justify-items: flex-end;
+}
+
+.ji-flex-start {
+  justify-items: flex-start;
+}
+
+.ji-inherit {
+  justify-items: inherit;
+}
+
+.ji-initial {
+  justify-items: initial;
+}
+
+.ji-left {
+  justify-items: left;
+}
+
+.ji-legacy {
+  justify-items: legacy;
+}
+
+.ji-normal {
+  justify-items: normal;
+}
+
+.ji-revert {
+  justify-items: revert;
+}
+
+.ji-right {
+  justify-items: right;
+}
+
+.ji-self-end {
+  justify-items: self-end;
+}
+
+.ji-self-start {
+  justify-items: self-start;
+}
+
+.ji-start {
+  justify-items: start;
+}
+
+.ji-stretch {
+  justify-items: stretch;
+}
+
+.ji-unset {
+  justify-items: unset;
+}
+
+.ac-baseline {
+  align-content: baseline;
+}
+
+.ac-center {
+  align-content: center;
+}
+
+.ac-end {
+  align-content: end;
+}
+
+.ac-flex-end {
+  align-content: flex-end;
+}
+
+.ac-flex-start {
+  align-content: flex-start;
+}
+
+.ac-inherit {
+  align-content: inherit;
+}
+
+.ac-initial {
+  align-content: initial;
+}
+
+.ac-normal {
+  align-content: normal;
+}
+
+.ac-revert {
+  align-content: revert;
+}
+
+.ac-around {
+  align-content: space-around;
+}
+
+.ac-between {
+  align-content: space-between;
+}
+
+.ac-evenly {
+  align-content: space-evenly;
+}
+
+.ac-start {
+  align-content: start;
+}
+
+.ac-stretch {
+  align-content: stretch;
+}
+
+.ac-unset {
+  align-content: unset;
+}
+
+.ai-baseline {
+  align-items: baseline;
+}
+
+.ai-center {
+  align-items: center;
+}
+
+.ai-end {
+  align-items: end;
+}
+
+.ai-flex-end {
+  align-items: flex-end;
+}
+
+.ai-flex-start {
+  align-items: flex-start;
+}
+
+.ai-inherit {
+  align-items: inherit;
+}
+
+.ai-initial {
+  align-items: initial;
+}
+
+.ai-normal {
+  align-items: normal;
+}
+
+.ai-revert {
+  align-items: revert;
+}
+
+.ai-self-end {
+  align-items: self-end;
+}
+
+.ai-self-start {
+  align-items: self-start;
+}
+
+.ai-start {
+  align-items: start;
+}
+
+.ai-stretch {
+  align-items: stretch;
+}
+
+.ai-unset {
+  align-items: unset;
+}
+
+.ai-auto {
+  align-self: auto;
+}
+
+.ai-baseline {
+  align-self: baseline;
+}
+
+.ai-center {
+  align-self: center;
+}
+
+.ai-end {
+  align-self: end;
+}
+
+.ai-flex-end {
+  align-self: flex-end;
+}
+
+.ai-flex-start {
+  align-self: flex-start;
+}
+
+.ai-inherit {
+  align-self: inherit;
+}
+
+.ai-initial {
+  align-self: initial;
+}
+
+.ai-normal {
+  align-self: normal;
+}
+
+.ai-revert {
+  align-self: revert;
+}
+
+.ai-self-end {
+  align-self: self-end;
+}
+
+.ai-self-start {
+  align-self: self-start;
+}
+
+.ai-start {
+  align-self: start;
+}
+
+.ai-stretch {
+  align-self: stretch;
+}
+
+.ai-unset {
+  align-self: unset;
+}
+
 /*# sourceMappingURL=BshadeUI.css.map */
