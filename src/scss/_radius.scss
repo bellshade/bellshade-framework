@@ -1,0 +1,21 @@
+@use "sass:string";
+
+@mixin radius($sudut: false, $unit: rem) {
+    @for $i from 0 to 51 {
+        $num: str-replace("#{calc($i / 10)}", ".", "\\.");
+        $slice: str-slice($num, 1, 4);
+
+        .radius-#{$slice} {
+            border-radius: calc($i / 10) + $unit !important;
+        }
+    }
+}
+
+@include radius();
+
+.radius-circle {
+    border-radius: 50% !important;
+}
+.radius-pill {
+    border-radius: 50rem !important;
+}
