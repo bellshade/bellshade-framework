@@ -1,0 +1,11 @@
+{
+    "editor.tabSize": 4,
+    "editor.formatOnSave": true,
+    "liveSassCompile.settings.formats": [
+        {
+            "format": "expanded",
+            "extensionName": ".css",
+            "savePath": "/dist/css"
+        }
+    ]
+}

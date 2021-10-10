@@ -1,0 +1,41 @@
+@mixin padding($direction: false, $unit: rem) {
+    @for $i from 0 to 50 {
+        @if $direction == false {
+            .p-#{$i} {
+                padding: $i + $unit;
+            }
+        } @else if $direction == t {
+            .p-#{$direction}-#{$i} {
+                padding-top: $i + $unit;
+            }
+        } @else if $direction == b {
+            .p-#{$direction}-#{$i} {
+                padding-bottom: $i + $unit;
+            }
+        } @else if $direction == l {
+            .p-#{$direction}-#{$i} {
+                padding-left: $i + $unit;
+            }
+        } @else if $direction == r {
+            .p-#{$direction}-#{$i} {
+                padding-right: $i + $unit;
+            }
+        }
+    }
+}
+
+// Gunakan satuan yang valid
+
+// satuan rem
+@include padding(); // hasilnya .p-0 sampai .p-50
+@include padding(t); // hasilnya .p-t-0 sampai .p-t-50
+@include padding(b); // hasilnya .p-b-0 sampai .p-b-50
+@include padding(l); // hasilnya .p-l-0 sampai .p-l-50
+@include padding(r); // hasilnya .p-r-0 sampai .p-r-50
+
+// // satuan pixel
+// @include padding(false, px); // hasilnya .p-0 sampai .p-50
+// @include padding(t, px); // hasilnya .p-t-0 sampai .p-t-50
+// @include padding(b, px); // hasilnya .p-b-0 sampai .p-b-50
+// @include padding(l, px); // hasilnya .p-l-0 sampai .p-l-50
+// @include padding(r, px); // hasilnya .p-r-0 sampai .p-r-50

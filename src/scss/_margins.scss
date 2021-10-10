@@ -1,0 +1,41 @@
+@mixin margin($direction: false, $unit: rem) {
+    @for $i from 0 to 50 {
+        @if $direction == false {
+            .m-#{$i} {
+                margin: $i + $unit;
+            }
+        } @else if $direction == t {
+            .m-#{$direction}-#{$i} {
+                margin-top: $i + $unit;
+            }
+        } @else if $direction == b {
+            .m-#{$direction}-#{$i} {
+                margin-bottom: $i + $unit;
+            }
+        } @else if $direction == l {
+            .m-#{$direction}-#{$i} {
+                margin-left: $i + $unit;
+            }
+        } @else if $direction == r {
+            .m-#{$direction}-#{$i} {
+                margin-right: $i + $unit;
+            }
+        }
+    }
+}
+
+// Gunakan satuan yang valid
+
+// satuan rem
+@include margin(); // hasilnya .m-0 sampai .m-50
+@include margin(t); // hasilnya .m-t-0 sampai .m-t-50
+@include margin(b); // hasilnya .m-b-0 sampai .m-b-50
+@include margin(l); // hasilnya .m-l-0 sampai .m-l-50
+@include margin(r); // hasilnya .m-r-0 sampai .m-r-50
+
+// // satuan pixel
+// @include margin(false, px); // hasilnya .m-0 sampai .m-50
+// @include margin(t, px); // hasilnya .m-t-0 sampai .m-t-50
+// @include margin(b, px); // hasilnya .m-b-0 sampai .m-b-50
+// @include margin(l, px); // hasilnya .m-l-0 sampai .m-l-50
+// @include margin(r, px); // hasilnya .m-r-0 sampai .m-r-50

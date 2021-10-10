@@ -1,0 +1,24 @@
+{
+  "name": "bellshade-framework",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "sass src/scss/BshadeUI.scss dist/css/BshadeUI.css",
+    "build-css": "node-sass --output-style expanded --source-map true --source-map-contents true --precision 6 src/scss/*.scss dist/css/*.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bellshade/bellshade-framework.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bellshade/bellshade-framework/issues"
+  },
+  "homepage": "https://github.com/bellshade/bellshade-framework#readme",
+  "dependencies": {
+    "node-sass": "^6.0.1",
+    "sass": "^1.42.1"
+  }
+}
