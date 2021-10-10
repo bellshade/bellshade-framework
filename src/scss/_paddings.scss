@@ -1,41 +1,58 @@
-@mixin padding($direction: false, $unit: rem) {
-    @for $i from 0 to 50 {
-        @if $direction == false {
-            .p-#{$i} {
-                padding: $i + $unit;
+@mixin padding($direction: false, $unit: rem, $sumbu: false) {
+    @if $sumbu == false {
+        @for $i from 0 to 101 {
+            $num: calc($i / 10);
+            $class-num: str-replace("#{$num}", ".", "\\.");
+            $slice: str-slice($class-num, 1, 4);
+
+            @if $direction == false {
+                .p-#{$slice} {
+                    padding: $num + $unit !important;
+                }
+            } @else if $direction == t {
+                .pt-#{$slice} {
+                    padding-top: $num + $unit !important;
+                }
+            } @else if $direction == b {
+                .pb-#{$slice} {
+                    padding-bottom: $num + $unit !important;
+                }
+            } @else if $direction == l {
+                .pl-#{$slice} {
+                    padding-left: $num + $unit !important;
+                }
+            } @else if $direction == r {
+                .pr-#{$slice} {
+                    padding-right: $num + $unit !important;
+                }
             }
-        } @else if $direction == t {
-            .p-#{$direction}-#{$i} {
-                padding-top: $i + $unit;
-            }
-        } @else if $direction == b {
-            .p-#{$direction}-#{$i} {
-                padding-bottom: $i + $unit;
-            }
-        } @else if $direction == l {
-            .p-#{$direction}-#{$i} {
-                padding-left: $i + $unit;
-            }
-        } @else if $direction == r {
-            .p-#{$direction}-#{$i} {
-                padding-right: $i + $unit;
+        }
+    } @else {
+        @for $i from 0 to 101 {
+            $num: calc($i / 10);
+            $class-num: str-replace("#{$num}", ".", "\\.");
+            $slice: str-slice($class-num, 1, 4);
+
+            @if $sumbu == x {
+                .px-#{$slice} {
+                    padding: 0 $num + $unit !important;
+                }
+            } @else if $sumbu == y {
+                .py-#{$slice} {
+                    padding: $num + $unit 0 !important;
+                }
             }
         }
     }
 }
 
-// Gunakan satuan yang valid
+// Positif
+@include padding(); // hasilnya .p-0 sampai .p-10
+@include padding(t); // hasilnya .pt-0 sampai .pt-10
+@include padding(b); // hasilnya .pb-0 sampai .pb-10
+@include padding(l); // hasilnya .pl-0 sampai .pl-10
+@include padding(r); // hasilnya .pr-0 sampai .pr-10
 
-// satuan rem
-@include padding(); // hasilnya .p-0 sampai .p-50
-@include padding(t); // hasilnya .p-t-0 sampai .p-t-50
-@include padding(b); // hasilnya .p-b-0 sampai .p-b-50
-@include padding(l); // hasilnya .p-l-0 sampai .p-l-50
-@include padding(r); // hasilnya .p-r-0 sampai .p-r-50
-
-// // satuan pixel
-// @include padding(false, px); // hasilnya .p-0 sampai .p-50
-// @include padding(t, px); // hasilnya .p-t-0 sampai .p-t-50
-// @include padding(b, px); // hasilnya .p-b-0 sampai .p-b-50
-// @include padding(l, px); // hasilnya .p-l-0 sampai .p-l-50
-// @include padding(r, px); // hasilnya .p-r-0 sampai .p-r-50
+// Sumbu
+@include padding($sumbu: x); // hasilnya .px-0 sampai .px-10
+@include padding($sumbu: y); // hasilnya .py-0 sampai .py-10
