@@ -12,18 +12,6 @@ $gray-800: #343a40 !default;
 $gray-900: #212529 !default;
 $black: #000 !default;
 
-$grays: (
-    "100": $gray-100,
-    "200": $gray-200,
-    "300": $gray-300,
-    "400": $gray-400,
-    "500": $gray-500,
-    "600": $gray-600,
-    "700": $gray-700,
-    "800": $gray-800,
-    "900": $gray-900
-) !default;
-
 // Warna
 $blue: #0d6efd !default;
 $indigo: #6610f2 !default;
@@ -136,6 +124,18 @@ $cyan-600: mix(black, $cyan, 20%) !default;
 $cyan-700: mix(black, $cyan, 40%) !default;
 $cyan-800: mix(black, $cyan, 60%) !default;
 $cyan-900: mix(black, $cyan, 80%) !default;
+
+$grays: (
+    "gray-100": $gray-100,
+    "gray-200": $gray-200,
+    "gray-300": $gray-300,
+    "gray-400": $gray-400,
+    "gray-500": $gray-500,
+    "gray-600": $gray-600,
+    "gray-700": $gray-700,
+    "gray-800": $gray-800,
+    "gray-900": $gray-900
+) !default;
 
 $blues: (
     "blue-100": $blue-100,
@@ -258,6 +258,7 @@ $cyans: (
 ) !default;
 
 $colors: (
+    "gray": $grays,
     "blue": $blues,
     "indigo": $indigos,
     "purple": $purples,
