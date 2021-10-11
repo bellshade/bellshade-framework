@@ -1,4 +1,15 @@
-@mixin margin($direction: false, $unit: rem, $minus: false, $sumbu: false) {
+@mixin margin(
+    $direction: false,
+    $unit: rem,
+    $minus: false,
+    $sumbu: false,
+    $screen: false
+) {
+    $prefix: "";
+    @if $screen != false {
+        $prefix: $screen + "\\:";
+    }
+
     @if $minus == false {
         @if $sumbu == false {
             @for $i from 0 to 101 {
@@ -7,24 +18,24 @@
                 $slice: str-slice($class-num, 1, 4);
 
                 @if $direction == false {
-                    .m-#{$slice} {
-                        margin: $num + $unit;
+                    .#{$prefix}m-#{$slice} {
+                        margin: $num + $unit !important;
                     }
                 } @else if $direction == t {
-                    .mt-#{$slice} {
-                        margin-top: $num + $unit;
+                    .#{$prefix}mt-#{$slice} {
+                        margin-top: $num + $unit !important;
                     }
                 } @else if $direction == b {
-                    .mb-#{$slice} {
-                        margin-bottom: $num + $unit;
+                    .#{$prefix}mb-#{$slice} {
+                        margin-bottom: $num + $unit !important;
                     }
                 } @else if $direction == l {
-                    .ml-#{$slice} {
-                        margin-left: $num + $unit;
+                    .#{$prefix}ml-#{$slice} {
+                        margin-left: $num + $unit !important;
                     }
                 } @else if $direction == r {
-                    .mr-#{$slice} {
-                        margin-right: $num + $unit;
+                    .#{$prefix}mr-#{$slice} {
+                        margin-right: $num + $unit !important;
                     }
                 }
             }
@@ -35,12 +46,12 @@
                 $slice: str-slice($class-num, 1, 4);
 
                 @if $sumbu == x {
-                    .mx-#{$slice} {
+                    .#{$prefix}mx-#{$slice} {
                         margin-left: $num + $unit !important;
                         margin-right: $num + $unit !important;
                     }
                 } @else if $sumbu == y {
-                    .my-#{$slice} {
+                    .#{$prefix}my-#{$slice} {
                         margin-top: $num + $unit !important;
                         margin-bottom: $num + $unit !important;
                     }
@@ -55,20 +66,20 @@
 
             @if $num >= 0.1 {
                 @if $direction == t {
-                    .-mt-#{$slice} {
-                        margin-top: -$num + $unit;
+                    .#{$prefix}-mt-#{$slice} {
+                        margin-top: -$num + $unit !important;
                     }
                 } @else if $direction == b {
-                    .-mb-#{$slice} {
-                        margin-bottom: -$num + $unit;
+                    .#{$prefix}-mb-#{$slice} {
+                        margin-bottom: -$num + $unit !important;
                     }
                 } @else if $direction == l {
-                    .-ml-#{$slice} {
-                        margin-left: -$num + $unit;
+                    .#{$prefix}-ml-#{$slice} {
+                        margin-left: -$num + $unit !important;
                     }
                 } @else if $direction == r {
-                    .-mr-#{$slice} {
-                        margin-right: -$num + $unit;
+                    .#{$prefix}-mr-#{$slice} {
+                        margin-right: -$num + $unit !important;
                     }
                 }
             }
@@ -77,19 +88,42 @@
 }
 
 // Positif
-@include margin(); // hasilnya .m-0 sampai .m-10
-@include margin(t); // hasilnya .mt-0 sampai .mt-10
-@include margin(b); // hasilnya .mb-0 sampai .mb-10
-@include margin(l); // hasilnya .ml-0 sampai .ml-10
-@include margin(r); // hasilnya .mr-0 sampai .mr-10
+@include margin();
+@include margin(t);
+@include margin(b);
+@include margin(l);
+@include margin(r);
 
 // Negatif
-@include margin($minus: true); // hasilnya .-m-0 sampai .-m-10
-@include margin(t, $minus: true); // hasilnya .-mt-0 sampai .-mt-10
-@include margin(b, $minus: true); // hasilnya .-mb-0 sampai .-mb-10
-@include margin(l, $minus: true); // hasilnya .-ml-0 sampai .-ml-10
-@include margin(r, $minus: true); // hasilnya .-mr-0 sampai .-mr-10
+@include margin($minus: true);
+@include margin(t, $minus: true);
+@include margin(b, $minus: true);
+@include margin(l, $minus: true);
+@include margin(r, $minus: true);
 
 // Sumbu
-@include margin($sumbu: x); // hasilnya .mx-0 sampai .mx-10
-@include margin($sumbu: y); // hasilnya .my-0 sampai .my-10
+@include margin($sumbu: x);
+@include margin($sumbu: y);
+
+// Margin pada breakpoint tertentu
+@each $key, $value in $breakpoints {
+    @include screen($key) {
+        // Positif
+        @include margin($screen: $key);
+        @include margin(t, $screen: $key);
+        @include margin(b, $screen: $key);
+        @include margin(l, $screen: $key);
+        @include margin(r, $screen: $key);
+
+        // Negatif
+        @include margin($minus: true, $screen: $key);
+        @include margin(t, $minus: true, $screen: $key);
+        @include margin(b, $minus: true, $screen: $key);
+        @include margin(l, $minus: true, $screen: $key);
+        @include margin(r, $minus: true, $screen: $key);
+
+        // Sumbu
+        @include margin($sumbu: x, $screen: $key);
+        @include margin($sumbu: y, $screen: $key);
+    }
+}

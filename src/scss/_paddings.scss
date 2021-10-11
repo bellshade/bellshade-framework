@@ -1,4 +1,9 @@
-@mixin padding($direction: false, $unit: rem, $sumbu: false) {
+@mixin padding($direction: false, $unit: rem, $sumbu: false, $screen: false) {
+    $prefix: "";
+    @if $screen != false {
+        $prefix: $screen + "\\:";
+    }
+
     @if $sumbu == false {
         @for $i from 0 to 101 {
             $num: calc($i / 10);
@@ -6,23 +11,23 @@
             $slice: str-slice($class-num, 1, 4);
 
             @if $direction == false {
-                .p-#{$slice} {
+                .#{$prefix}p-#{$slice} {
                     padding: $num + $unit !important;
                 }
             } @else if $direction == t {
-                .pt-#{$slice} {
+                .#{$prefix}pt-#{$slice} {
                     padding-top: $num + $unit !important;
                 }
             } @else if $direction == b {
-                .pb-#{$slice} {
+                .#{$prefix}pb-#{$slice} {
                     padding-bottom: $num + $unit !important;
                 }
             } @else if $direction == l {
-                .pl-#{$slice} {
+                .#{$prefix}pl-#{$slice} {
                     padding-left: $num + $unit !important;
                 }
             } @else if $direction == r {
-                .pr-#{$slice} {
+                .#{$prefix}pr-#{$slice} {
                     padding-right: $num + $unit !important;
                 }
             }
@@ -34,12 +39,12 @@
             $slice: str-slice($class-num, 1, 4);
 
             @if $sumbu == x {
-                .px-#{$slice} {
+                .#{$prefix}px-#{$slice} {
                     padding-left: $num + $unit !important;
                     padding-right: $num + $unit !important;
                 }
             } @else if $sumbu == y {
-                .py-#{$slice} {
+                .#{$prefix}py-#{$slice} {
                     padding-top: $num + $unit !important;
                     padding-bottom: $num + $unit !important;
                 }
@@ -49,12 +54,27 @@
 }
 
 // Positif
-@include padding(); // hasilnya .p-0 sampai .p-10
-@include padding(t); // hasilnya .pt-0 sampai .pt-10
-@include padding(b); // hasilnya .pb-0 sampai .pb-10
-@include padding(l); // hasilnya .pl-0 sampai .pl-10
-@include padding(r); // hasilnya .pr-0 sampai .pr-10
+@include padding();
+@include padding(t);
+@include padding(b);
+@include padding(l);
+@include padding(r);
 
 // Sumbu
-@include padding($sumbu: x); // hasilnya .px-0 sampai .px-10
-@include padding($sumbu: y); // hasilnya .py-0 sampai .py-10
+@include padding($sumbu: x);
+@include padding($sumbu: y);
+
+// Padding pada breakpoint tertentu
+@each $key, $value in $breakpoints {
+    @include screen($key) {
+        @include padding($screen: $key);
+        @include padding(t, $screen: $key);
+        @include padding(b, $screen: $key);
+        @include padding(l, $screen: $key);
+        @include padding(r, $screen: $key);
+
+        // Sumbu
+        @include padding($sumbu: x, $screen: $key);
+        @include padding($sumbu: y, $screen: $key);
+    }
+}
