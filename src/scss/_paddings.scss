@@ -35,11 +35,13 @@
 
             @if $sumbu == x {
                 .px-#{$slice} {
-                    padding: 0 $num + $unit !important;
+                    padding-left: $num + $unit !important;
+                    padding-right: $num + $unit !important;
                 }
             } @else if $sumbu == y {
                 .py-#{$slice} {
-                    padding: $num + $unit 0 !important;
+                    padding-top: $num + $unit !important;
+                    padding-bottom: $num + $unit !important;
                 }
             }
         }
