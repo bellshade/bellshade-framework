@@ -1,0 +1,106 @@
+// Border Style
+$borders: (
+    dotted,
+    dashed,
+    solid,
+    double,
+    groove,
+    ridge,
+    inset,
+    outset,
+    none,
+    hidden,
+    mix
+);
+
+@each $border in $borders {
+    .bs-#{$border} {
+        border-style: $border;
+    }
+}
+
+// Border Width
+@mixin border-width($direction: false, $unit: px, $sumbu: false) {
+    @if $sumbu == false {
+        @for $i from 0 to 101 {
+            $num: calc($i / 10);
+            $class-num: str-replace("#{$num}", ".", "\\.");
+            $slice: str-slice($class-num, 1, 4);
+
+            @if $direction == false {
+                .bw-#{$slice} {
+                    border-width: $num + $unit;
+                }
+            } @else if $direction == t {
+                .bw-t-#{$slice} {
+                    border-top-width: $num + $unit;
+                }
+            } @else if $direction == b {
+                .bw-b-#{$slice} {
+                    border-bottom-width: $num + $unit;
+                }
+            } @else if $direction == l {
+                .bw-l-#{$slice} {
+                    border-left-width: $num + $unit;
+                }
+            } @else if $direction == r {
+                .bw-r-#{$slice} {
+                    border-right-width: $num + $unit;
+                }
+            }
+        }
+    } @else {
+        @for $i from 0 to 101 {
+            $num: calc($i / 10);
+            $class-num: str-replace("#{$num}", ".", "\\.");
+            $slice: str-slice($class-num, 1, 4);
+
+            @if $sumbu == x {
+                .bw-x-#{$slice} {
+                    border-left-width: $num + $unit;
+                    border-right-width: $num + $unit;
+                }
+            } @else if $sumbu == y {
+                .bw-y-#{$slice} {
+                    border-top-width: $num + $unit;
+                    border-bottom-width: $num + $unit;
+                }
+            }
+        }
+    }
+}
+
+// Positif
+@include border-width(); // hasilnya .bw-0 sampai .bw-10
+@include border-width(t); // hasilnya .bw-t-0 sampai .bw-t-10
+@include border-width(b); // hasilnya .bw-b-0 sampai .bw-b-10
+@include border-width(l); // hasilnya .bw-l-0 sampai .bw-l-10
+@include border-width(r); // hasilnya .bw-r-0 sampai .bw-r-10
+
+// Sumbu
+@include border-width($sumbu: x); // hasilnya .bw-x-0 sampai .bw-x-10
+@include border-width($sumbu: y); // hasilnya .bw-y-0 sampai .bw-y-10
+
+// Border Color
+@mixin border-color($colors) {
+    @each $key, $value in $colors {
+        .bc-#{$key} {
+            border-color: $value;
+        }
+    }
+}
+
+.bc-white {
+    border-color: $white;
+}
+.bc-black {
+    border-color: $black;
+}
+.bc-transparent {
+    border-color: transparent;
+}
+
+// melakukan perulangan untuk semua warna
+@each $key, $value in $colors {
+    @include border-color($value);
+}
