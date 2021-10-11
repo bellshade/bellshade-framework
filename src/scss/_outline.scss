@@ -1,0 +1,46 @@
+// Outline Style
+@each $border in $borders {
+    .os-#{$border} {
+        outline-style: $border;
+    }
+}
+
+// Outline Width
+@mixin outline-width($unit: px) {
+    @for $i from 0 to 101 {
+        $num: calc($i / 10);
+        $class-num: str-replace("#{$num}", ".", "\\.");
+        $slice: str-slice($class-num, 1, 4);
+
+        .ow-#{$slice} {
+            outline-width: $num + $unit;
+        }
+    }
+}
+
+// Positif
+@include outline-width(); // hasilnya .ow-0 sampai .ow-10
+
+// Outline Color
+@mixin outline-color($colors) {
+    @each $key, $value in $colors {
+        .oc-#{$key} {
+            outline-color: $value;
+        }
+    }
+}
+
+.oc-white {
+    outline-color: $white;
+}
+.oc-black {
+    outline-color: $black;
+}
+.oc-transparent {
+    outline-color: transparent;
+}
+
+// Melakukan perulangan untuk semua warna
+@each $key, $value in $colors {
+    @include outline-color($value);
+}

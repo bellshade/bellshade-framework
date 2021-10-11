@@ -1,18 +1,4 @@
 // Border Style
-$borders: (
-    dotted,
-    dashed,
-    solid,
-    double,
-    groove,
-    ridge,
-    inset,
-    outset,
-    none,
-    hidden,
-    mix
-);
-
 @each $border in $borders {
     .bs-#{$border} {
         border-style: $border;

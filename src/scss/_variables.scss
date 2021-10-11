@@ -270,3 +270,17 @@ $colors: (
     "teal": $teals,
     "cyan": $cyans
 ) !default;
+
+// Border
+$borders: (
+    dotted,
+    dashed,
+    solid,
+    double,
+    groove,
+    ridge,
+    inset,
+    outset,
+    none,
+    hidden
+);
