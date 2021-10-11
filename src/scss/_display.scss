@@ -1,8 +1,32 @@
-$display: block, contents, flex, flex-root, grid, inherit, initial, inline,
-    inline-block, inline-flex, inline-grid, inline-table, list-item, none,
-    revert, table, table-caption, table-cell, table-column, table-column-group,
-    table-footer-group, table-header-group, table-row, table-row-group, unset,
-    -webkit-box, -webkit-inline-box;
+$display: (
+    block,
+    contents,
+    flex,
+    flex-root,
+    grid,
+    inherit,
+    initial,
+    inline,
+    inline-block,
+    inline-flex,
+    inline-grid,
+    inline-table,
+    list-item,
+    none,
+    revert,
+    table,
+    table-caption,
+    table-cell,
+    table-column,
+    table-column-group,
+    table-footer-group,
+    table-header-group,
+    table-row,
+    table-row-group,
+    unset,
+    -webkit-box,
+    -webkit-inline-box
+) !default;
 
 @each $dis in $display {
     .#{$dis} {
@@ -11,6 +35,47 @@ $display: block, contents, flex, flex-root, grid, inherit, initial, inline,
 }
 
 // Flex Box
+// --------------------------------------------------------
+// Flex Flow
+$flow: (
+    "col": column,
+    "col-reverse": column-reverse,
+    "inherit": inherit,
+    "initial": initial,
+    "nowrap": nowrap,
+    "revert": revert,
+    "row": row,
+    "row-reverse": row-reverse,
+    "unset": unset,
+    "wrap": wrap,
+    "wrap-reverse": wrap-reverse
+) !default;
+
+@each $key, $value in $flow {
+    .flow-#{$key} {
+        flex-flow: $value;
+    }
+}
+
+// Flex Direction
+$flex-direction: (
+    "col": column,
+    "col-reverse": column-reverse,
+    "inherit": inherit,
+    "initial": initial,
+    "revert": revert,
+    "row": row,
+    "row-reverse": row-reverse,
+    "unse": unset
+) !default;
+
+@each $key, $value in $flex-direction {
+    .direction-#{$key} {
+        flex-direction: $value;
+    }
+}
+
+// Justify Content
 $justify-content-values: (
     "center": center,
     "end": end,
@@ -36,6 +101,7 @@ $justify-content-values: (
     }
 }
 
+// Justify Self
 $justify-self-values: (
     "auto": auto,
     "baseline": baseline,
@@ -62,6 +128,7 @@ $justify-self-values: (
     }
 }
 
+// Justify Items
 $justify-items-values: (
     "baseline": baseline,
     "center": center,
@@ -88,6 +155,7 @@ $justify-items-values: (
     }
 }
 
+// Align Content
 $align-content-values: (
     "baseline": baseline,
     "center": center,
@@ -112,6 +180,7 @@ $align-content-values: (
     }
 }
 
+// Align Items
 $align-items-values: (
     "baseline": baseline,
     "center": center,
@@ -135,6 +204,7 @@ $align-items-values: (
     }
 }
 
+// Align Self
 $align-self-values: (
     "auto": auto,
     "baseline": baseline,
@@ -158,3 +228,68 @@ $align-self-values: (
         align-self: $position;
     }
 }
+
+// Grid
+// --------------------------------------------------------
+// Grid Template Columns
+.g-col-none {
+    grid-template-columns: none;
+}
+@for $i from 1 to 13 {
+    .g-col-#{$i} {
+        grid-template-columns: repeat($i, minmax(0, 1fr));
+    }
+}
+
+// Grid Template Rows
+.g-row-none {
+    grid-template-rows: none;
+}
+@for $i from 1 to 26 {
+    .g-row-#{$i} {
+        grid-template-rows: repeat($i, minmax(0, 1fr));
+    }
+}
+
+// Grid Auto Flow
+.g-flow-col {
+    grid-auto-flow: column;
+}
+.g-flow-row {
+    grid-auto-flow: row;
+}
+
+// Gap
+@mixin gap($sumbu: false, $unit: rem) {
+    @if $sumbu == false {
+        @for $i from 0 to 101 {
+            $num: calc($i / 10);
+            $class-num: str-replace("#{$num}", ".", "\\.");
+            $slice: str-slice($class-num, 1, 4);
+
+            .gap-#{$slice} {
+                gap: $num + $unit;
+            }
+        }
+    } @else {
+        @for $i from 0 to 101 {
+            $num: calc($i / 10);
+            $class-num: str-replace("#{$num}", ".", "\\.");
+            $slice: str-slice($class-num, 1, 4);
+
+            @if $sumbu == x {
+                .gap-x-#{$slice} {
+                    column-gap: $num + $unit;
+                }
+            } @else if $sumbu == y {
+                .gap-y-#{$slice} {
+                    row-gap: $num + $unit;
+                }
+            }
+        }
+    }
+}
+
+@include gap();
+@include gap(x);
+@include gap(y);
