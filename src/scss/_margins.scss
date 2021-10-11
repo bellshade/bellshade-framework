@@ -36,40 +36,40 @@
 
                 @if $sumbu == x {
                     .mx-#{$slice} {
-                        margin: 0 $num + $unit !important;
+                        margin-left: $num + $unit !important;
+                        margin-right: $num + $unit !important;
                     }
                 } @else if $sumbu == y {
                     .my-#{$slice} {
-                        margin: $num + $unit 0 !important;
+                        margin-top: $num + $unit !important;
+                        margin-bottom: $num + $unit !important;
                     }
                 }
             }
         }
     } @else {
-        @for $i from 0 to 10 {
+        @for $i from 0 to 101 {
             $num: calc($i / 10);
             $class-num: str-replace("#{$num}", ".", "\\.");
             $slice: str-slice($class-num, 1, 4);
 
-            @if $direction == false {
-                .-m-#{$slice} {
-                    margin: -$num + $unit;
-                }
-            } @else if $direction == t {
-                .-mt-#{$slice} {
-                    margin-top: -$num + $unit;
-                }
-            } @else if $direction == b {
-                .-mb-#{$slice} {
-                    margin-bottom: -$num + $unit;
-                }
-            } @else if $direction == l {
-                .-ml-#{$slice} {
-                    margin-left: -$num + $unit;
-                }
-            } @else if $direction == r {
-                .-mr-#{$slice} {
-                    margin-right: -$num + $unit;
+            @if $num >= 0.1 {
+                @if $direction == t {
+                    .-mt-#{$slice} {
+                        margin-top: -$num + $unit;
+                    }
+                } @else if $direction == b {
+                    .-mb-#{$slice} {
+                        margin-bottom: -$num + $unit;
+                    }
+                } @else if $direction == l {
+                    .-ml-#{$slice} {
+                        margin-left: -$num + $unit;
+                    }
+                } @else if $direction == r {
+                    .-mr-#{$slice} {
+                        margin-right: -$num + $unit;
+                    }
                 }
             }
         }
