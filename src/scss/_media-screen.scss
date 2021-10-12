@@ -1,5 +1,6 @@
 // Breakpoints
 $breakpoints: (
+    xs: 320px,
     sm: 576px,
     md: 768px,
     lg: 992px,
@@ -8,7 +9,11 @@ $breakpoints: (
 );
 
 @mixin screen($breakpoint) {
-    @if $breakpoint == sm {
+    @if $breakpoint == xs {
+        @media (min-width: map-get($breakpoints, xs)) {
+            @content;
+        }
+    } @else if $breakpoint == sm {
         @media (min-width: map-get($breakpoints, sm)) {
             @content;
         }
