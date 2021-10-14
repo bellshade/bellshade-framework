@@ -1,6 +1,6 @@
 // Outline Style
 @each $border in $borders {
-    .os-#{$border} {
+    .outline-#{$border} {
         outline-style: $border;
     }
 }
@@ -12,31 +12,31 @@
         $class-num: str-replace("#{$num}", ".", "\\.");
         $slice: str-slice($class-num, 1, 4);
 
-        .ow-#{$slice} {
+        .outline-#{$slice} {
             outline-width: $num + $unit;
         }
     }
 }
 
 // Positif
-@include outline-width(); // hasilnya .ow-0 sampai .ow-10
+@include outline-width(); // hasilnya .outline-0 sampai .outline-10
 
 // Outline Color
 @mixin outline-color($colors) {
     @each $key, $value in $colors {
-        .oc-#{$key} {
+        .outline-#{$key} {
             outline-color: $value;
         }
     }
 }
 
-.oc-white {
+.outline-white {
     outline-color: $white;
 }
-.oc-black {
+.outline-black {
     outline-color: $black;
 }
-.oc-transparent {
+.outline-transparent {
     outline-color: transparent;
 }
 
