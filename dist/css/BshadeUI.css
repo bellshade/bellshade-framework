@@ -1237,27 +1237,27 @@ template {
   font-weight: initial;
 }
 
-.decoration-strike {
+.text-decoration-strike {
   -webkit-text-decoration-line: line-through;
           text-decoration-line: line-through;
 }
 
-.decoration-none {
+.text-decoration-none {
   -webkit-text-decoration-line: none;
           text-decoration-line: none;
 }
 
-.decoration-overline {
+.text-decoration-overline {
   -webkit-text-decoration-line: overline;
           text-decoration-line: overline;
 }
 
-.decoration-underline {
+.text-decoration-underline {
   -webkit-text-decoration-line: underline;
           text-decoration-line: underline;
 }
 
-.decoration-over-under {
+.text-decoration-over-under {
   -webkit-text-decoration-line: overline underline;
           text-decoration-line: overline underline;
 }

@@ -105,7 +105,7 @@ $text-decoration: (
     "over-under": overline underline
 ) !default;
 @each $key, $value in $text-decoration {
-    .decoration-#{$key} {
+    .text-decoration-#{$key} {
         text-decoration-line: $value;
     }
 }
