@@ -96,7 +96,7 @@ $justify-content-values: (
 ) !default;
 
 @each $key, $position in $justify-content-values {
-    .jc-#{$key} {
+    .justify-content-#{$key} {
         justify-content: $position;
     }
 }
@@ -123,7 +123,7 @@ $justify-self-values: (
 ) !default;
 
 @each $key, $position in $justify-self-values {
-    .js-#{$key} {
+    .justify-self-#{$key} {
         justify-self: $position;
     }
 }
@@ -150,7 +150,7 @@ $justify-items-values: (
 ) !default;
 
 @each $key, $position in $justify-items-values {
-    .ji-#{$key} {
+    .justify-items-#{$key} {
         justify-items: $position;
     }
 }
@@ -175,7 +175,7 @@ $align-content-values: (
 ) !default;
 
 @each $key, $position in $align-content-values {
-    .ac-#{$key} {
+    .align-content-#{$key} {
         align-content: $position;
     }
 }
@@ -199,7 +199,7 @@ $align-items-values: (
 ) !default;
 
 @each $key, $position in $align-items-values {
-    .ai-#{$key} {
+    .align-items-#{$key} {
         align-items: $position;
     }
 }
@@ -224,7 +224,7 @@ $align-self-values: (
 ) !default;
 
 @each $key, $position in $align-self-values {
-    .ai-#{$key} {
+    .align-self-#{$key} {
         align-self: $position;
     }
 }
@@ -232,30 +232,30 @@ $align-self-values: (
 // Grid
 // --------------------------------------------------------
 // Grid Template Columns
-.g-col-none {
+.grid-cols-none {
     grid-template-columns: none;
 }
 @for $i from 1 to 13 {
-    .g-col-#{$i} {
+    .grid-cols-#{$i} {
         grid-template-columns: repeat($i, minmax(0, 1fr));
     }
 }
 
 // Grid Template Rows
-.g-row-none {
+.grid-rows-none {
     grid-template-rows: none;
 }
 @for $i from 1 to 26 {
-    .g-row-#{$i} {
+    .grid-rows-#{$i} {
         grid-template-rows: repeat($i, minmax(0, 1fr));
     }
 }
 
 // Grid Auto Flow
-.g-flow-col {
+.grid-flow-col {
     grid-auto-flow: column;
 }
-.g-flow-row {
+.grid-flow-row {
     grid-auto-flow: row;
 }
 
