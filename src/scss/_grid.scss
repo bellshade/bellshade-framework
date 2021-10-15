@@ -14,6 +14,19 @@
         }
     }
 
+    // Grid Column
+    .#{$prefix}colspan-auto {
+        grid-column: auto;
+    }
+    @for $i from 1 to 13 {
+        .#{$prefix}colspan-#{$i} {
+            grid-column: span $i / span $i;
+        }
+    }
+    .#{$prefix}colspan-full {
+        grid-column: 1 / -1;
+    }
+
     // Grid Template Rows
     .#{$prefix}grid-rows-none {
         grid-template-rows: none;
