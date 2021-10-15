@@ -1,23 +1,36 @@
 // Membuat background-color
-@mixin bg-color($colors) {
+@mixin bg-color($colors, $prefix: "") {
     @each $key, $value in $colors {
-        .bg-#{$key} {
+        .#{$prefix}bg-#{$key} {
             background-color: $value;
         }
     }
 }
 
-.bg-white {
-    background-color: $white;
-}
-.bg-black {
-    background-color: $black;
-}
-.bg-transparent {
-    background-color: transparent;
+@mixin backgrounds($prefix: "") {
+    .#{$prefix}bg-white {
+        background-color: $white;
+    }
+    .#{$prefix}bg-black {
+        background-color: $black;
+    }
+    .#{$prefix}bg-transparent {
+        background-color: transparent;
+    }
+
+    // Melakukan perulangan untuk semua warna
+    @each $key, $value in $colors {
+        @include bg-color($value, $prefix);
+    }
 }
 
-// Melakukan perulangan untuk semua warna
-@each $key, $value in $colors {
-    @include bg-color($value);
+// Tanpa breakpoint
+@include backgrounds();
+
+// Dengan breakpoint
+@each $key, $value in $breakpoints {
+    $prefix: $key + "\\:";
+    @include screen($key) {
+        @include backgrounds($prefix);
+    }
 }
