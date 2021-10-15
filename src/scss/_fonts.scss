@@ -1,7 +1,7 @@
 // Membuat Text Color
 @mixin text-color($colors, $prefix: "") {
     @each $key, $value in $colors {
-        .#{$prefix}#{$key} {
+        .#{$prefix}color-#{$key} {
             color: $value;
         }
     }
@@ -16,10 +16,10 @@
 }
 
 @mixin fonts($prefix: "") {
-    .#{$prefix}white {
+    .#{$prefix}color-white {
         color: $white;
     }
-    .#{$prefix}black {
+    .#{$prefix}color-black {
         color: $black;
     }
 
