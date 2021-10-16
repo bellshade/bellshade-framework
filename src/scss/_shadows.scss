@@ -1,0 +1,111 @@
+@mixin shadow-color($colors, $prefix: "") {
+    @each $key, $value in $colors {
+        .#{$prefix}shadow-#{$key} {
+            --shadow-x: 0.2rem;
+            --shadow-y: 0.2rem;
+            --shadow-blur: 0.2rem;
+            box-shadow: var(--shadow-x)
+                var(--shadow-y)
+                var(--shadow-blur)
+                $value;
+        }
+    }
+}
+
+@mixin shadows($minus: false, $prefix: "") {
+    @if $minus {
+        @for $i from 0 to 51 {
+            $num: calc($i / 10);
+            $class-num: str-replace("#{$num}", ".", "\\.");
+            $slice: str-slice($class-num, 1, 4);
+
+            // Shadow X
+            .#{$prefix}shadow-x-#{$slice} {
+                --shadow-x: #{$num}rem;
+            }
+            // Shadow Y
+            .#{$prefix}shadow-y-#{$slice} {
+                --shadow-y: #{$num}rem;
+            }
+            // Shadow X dan Y
+            .#{$prefix}shadow-xy-#{$slice} {
+                --shadow-x: #{$num}rem;
+                --shadow-y: #{$num}rem;
+            }
+            // Shadow Blur
+            .#{$prefix}shadow-blur-#{$slice} {
+                --shadow-blur: #{$num}rem;
+            }
+        }
+    } @else {
+        @for $i from 0 to 51 {
+            $num: calc($i / 10);
+            $class-num: str-replace("#{$num}", ".", "\\.");
+            $slice: str-slice($class-num, 1, 4);
+
+            @if $num >= 0.1 {
+                // Shadow -X
+                .#{$prefix}-shadow-x-#{$slice} {
+                    --shadow-x: #{-$num}rem;
+                }
+                // Shadow -Y
+                .#{$prefix}-shadow-y-#{$slice} {
+                    --shadow-y: #{-$num}rem;
+                }
+                // Shadow X dan Y
+                .#{$prefix}-shadow-xy-#{$slice} {
+                    --shadow-x: #{-$num}rem;
+                    --shadow-y: #{-$num}rem;
+                }
+            }
+        }
+    }
+}
+
+@mixin shadows-2($prefix: "") {
+    // Tanpa Shadow
+    .#{$prefix}shadow-none {
+        box-shadow: none;
+    }
+
+    // Default Shadow
+    .#{$prefix}shadow {
+        --shadow-x: 0rem;
+        --shadow-y: 0.2rem;
+        --shadow-blur: 0.2rem;
+        box-shadow: var(--shadow-x) var(--shadow-y) var(--shadow-blur) $gray-200 !important;
+    }
+
+    // Shadow Color
+    .#{$prefix}shadow-black {
+        --shadow-x: 0.2rem;
+        --shadow-y: 0.2rem;
+        --shadow-blur: 0.2rem;
+        box-shadow: var(--shadow-x) var(--shadow-y) var(--shadow-blur) $black;
+    }
+    @each $key, $value in $colors {
+        @include shadow-color($value, $prefix);
+    }
+}
+
+// Tanpa breakpoint
+// Positif
+@include shadows();
+@include shadows-2();
+
+// Negatif
+@include shadows(true);
+
+// Dengan breakpoint
+@each $key, $value in $breakpoints {
+    $prefixer: $key + "\\:";
+    @include screen($key) {
+        @include shadows-2($prefixer);
+
+        // Positif
+        @include shadows($prefix: $prefixer);
+
+        // Negatif
+        @include shadows(true, $prefix: $prefixer);
+    }
+}
