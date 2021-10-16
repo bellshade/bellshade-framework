@@ -13,7 +13,7 @@
 }
 
 @mixin shadows($minus: false, $prefix: "") {
-    @if $minus {
+    @if $minus == false {
         @for $i from 0 to 51 {
             $num: calc($i / 10);
             $class-num: str-replace("#{$num}", ".", "\\.");
