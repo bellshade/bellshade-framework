@@ -1,18 +1,9 @@
 // Variables
 
-$white: #fff !default;
-$gray-100: #f8f9fa !default;
-$gray-200: #e9ecef !default;
-$gray-300: #dee2e6 !default;
-$gray-400: #ced4da !default;
-$gray-500: #adb5bd !default;
-$gray-600: #6c757d !default;
-$gray-700: #495057 !default;
-$gray-800: #343a40 !default;
-$gray-900: #212529 !default;
-$black: #000 !default;
-
 // Warna
+$white: #fff !default;
+$black: #000 !default;
+$gray: #adb5bd !default;
 $blue: #0d6efd !default;
 $indigo: #6610f2 !default;
 $purple: #6f42c1 !default;
@@ -25,6 +16,18 @@ $teal: #20c997 !default;
 $cyan: #0dcaf0 !default;
 
 // Tingkat warna
+$gray-50: mix(white, $gray, 90%) !default;
+$gray-100: mix(white, $gray, 80%) !default;
+$gray-200: mix(white, $gray, 60%) !default;
+$gray-300: mix(white, $gray, 40%) !default;
+$gray-400: mix(white, $gray, 20%) !default;
+$gray-500: $gray !default;
+$gray-600: mix(black, $gray, 20%) !default;
+$gray-700: mix(black, $gray, 40%) !default;
+$gray-800: mix(black, $gray, 60%) !default;
+$gray-900: mix(black, $gray, 80%) !default;
+
+$blue-50: mix(white, $blue, 90%) !default;
 $blue-100: mix(white, $blue, 80%) !default;
 $blue-200: mix(white, $blue, 60%) !default;
 $blue-300: mix(white, $blue, 40%) !default;
@@ -35,6 +38,7 @@ $blue-700: mix(black, $blue, 40%) !default;
 $blue-800: mix(black, $blue, 60%) !default;
 $blue-900: mix(black, $blue, 80%) !default;
 
+$indigo-50: mix(white, $indigo, 90%) !default;
 $indigo-100: mix(white, $indigo, 80%) !default;
 $indigo-200: mix(white, $indigo, 60%) !default;
 $indigo-300: mix(white, $indigo, 40%) !default;
@@ -45,6 +49,7 @@ $indigo-700: mix(black, $indigo, 40%) !default;
 $indigo-800: mix(black, $indigo, 60%) !default;
 $indigo-900: mix(black, $indigo, 80%) !default;
 
+$purple-50: mix(white, $purple, 90%) !default;
 $purple-100: mix(white, $purple, 80%) !default;
 $purple-200: mix(white, $purple, 60%) !default;
 $purple-300: mix(white, $purple, 40%) !default;
@@ -55,6 +60,7 @@ $purple-700: mix(black, $purple, 40%) !default;
 $purple-800: mix(black, $purple, 60%) !default;
 $purple-900: mix(black, $purple, 80%) !default;
 
+$pink-50: mix(white, $pink, 90%) !default;
 $pink-100: mix(white, $pink, 80%) !default;
 $pink-200: mix(white, $pink, 60%) !default;
 $pink-300: mix(white, $pink, 40%) !default;
@@ -65,6 +71,7 @@ $pink-700: mix(black, $pink, 40%) !default;
 $pink-800: mix(black, $pink, 60%) !default;
 $pink-900: mix(black, $pink, 80%) !default;
 
+$red-50: mix(white, $red, 90%) !default;
 $red-100: mix(white, $red, 80%) !default;
 $red-200: mix(white, $red, 60%) !default;
 $red-300: mix(white, $red, 40%) !default;
@@ -75,6 +82,7 @@ $red-700: mix(black, $red, 40%) !default;
 $red-800: mix(black, $red, 60%) !default;
 $red-900: mix(black, $red, 80%) !default;
 
+$orange-50: mix(white, $orange, 90%) !default;
 $orange-100: mix(white, $orange, 80%) !default;
 $orange-200: mix(white, $orange, 60%) !default;
 $orange-300: mix(white, $orange, 40%) !default;
@@ -85,6 +93,7 @@ $orange-700: mix(black, $orange, 40%) !default;
 $orange-800: mix(black, $orange, 60%) !default;
 $orange-900: mix(black, $orange, 80%) !default;
 
+$yellow-50: mix(white, $yellow, 90%) !default;
 $yellow-100: mix(white, $yellow, 80%) !default;
 $yellow-200: mix(white, $yellow, 60%) !default;
 $yellow-300: mix(white, $yellow, 40%) !default;
@@ -95,6 +104,7 @@ $yellow-700: mix(black, $yellow, 40%) !default;
 $yellow-800: mix(black, $yellow, 60%) !default;
 $yellow-900: mix(black, $yellow, 80%) !default;
 
+$green-50: mix(white, $green, 90%) !default;
 $green-100: mix(white, $green, 80%) !default;
 $green-200: mix(white, $green, 60%) !default;
 $green-300: mix(white, $green, 40%) !default;
@@ -105,6 +115,7 @@ $green-700: mix(black, $green, 40%) !default;
 $green-800: mix(black, $green, 60%) !default;
 $green-900: mix(black, $green, 80%) !default;
 
+$teal-50: mix(white, $teal, 90%) !default;
 $teal-100: mix(white, $teal, 80%) !default;
 $teal-200: mix(white, $teal, 60%) !default;
 $teal-300: mix(white, $teal, 40%) !default;
@@ -115,6 +126,7 @@ $teal-700: mix(black, $teal, 40%) !default;
 $teal-800: mix(black, $teal, 60%) !default;
 $teal-900: mix(black, $teal, 80%) !default;
 
+$cyan-50: mix(white, $cyan, 90%) !default;
 $cyan-100: mix(white, $cyan, 80%) !default;
 $cyan-200: mix(white, $cyan, 60%) !default;
 $cyan-300: mix(white, $cyan, 40%) !default;
@@ -126,6 +138,7 @@ $cyan-800: mix(black, $cyan, 60%) !default;
 $cyan-900: mix(black, $cyan, 80%) !default;
 
 $grays: (
+    "gray-50": $gray-50,
     "gray-100": $gray-100,
     "gray-200": $gray-200,
     "gray-300": $gray-300,
@@ -138,6 +151,7 @@ $grays: (
 ) !default;
 
 $blues: (
+    "blue-50": $blue-50,
     "blue-100": $blue-100,
     "blue-200": $blue-200,
     "blue-300": $blue-300,
@@ -150,6 +164,7 @@ $blues: (
 ) !default;
 
 $indigos: (
+    "indigo-50": $indigo-50,
     "indigo-100": $indigo-100,
     "indigo-200": $indigo-200,
     "indigo-300": $indigo-300,
@@ -162,6 +177,7 @@ $indigos: (
 ) !default;
 
 $purples: (
+    "purple-50": $purple-50,
     "purple-100": $purple-100,
     "purple-200": $purple-200,
     "purple-300": $purple-300,
@@ -174,6 +190,7 @@ $purples: (
 ) !default;
 
 $pinks: (
+    "pink-50": $pink-50,
     "pink-100": $pink-100,
     "pink-200": $pink-200,
     "pink-300": $pink-300,
@@ -186,6 +203,7 @@ $pinks: (
 ) !default;
 
 $reds: (
+    "red-50": $red-50,
     "red-100": $red-100,
     "red-200": $red-200,
     "red-300": $red-300,
@@ -198,6 +216,7 @@ $reds: (
 ) !default;
 
 $oranges: (
+    "orange-50": $orange-50,
     "orange-100": $orange-100,
     "orange-200": $orange-200,
     "orange-300": $orange-300,
@@ -210,6 +229,7 @@ $oranges: (
 ) !default;
 
 $yellows: (
+    "yellow-50": $yellow-50,
     "yellow-100": $yellow-100,
     "yellow-200": $yellow-200,
     "yellow-300": $yellow-300,
@@ -222,6 +242,7 @@ $yellows: (
 ) !default;
 
 $greens: (
+    "green-50": $green-50,
     "green-100": $green-100,
     "green-200": $green-200,
     "green-300": $green-300,
@@ -234,6 +255,7 @@ $greens: (
 ) !default;
 
 $teals: (
+    "teal-50": $teal-50,
     "teal-100": $teal-100,
     "teal-200": $teal-200,
     "teal-300": $teal-300,
@@ -246,6 +268,7 @@ $teals: (
 ) !default;
 
 $cyans: (
+    "cyan-50": $cyan-50,
     "cyan-100": $cyan-100,
     "cyan-200": $cyan-200,
     "cyan-300": $cyan-300,
