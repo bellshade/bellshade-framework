@@ -492,11 +492,11 @@ a {
 }
 
 .bg-purple-100 {
-  background-color: #c5b3e6;
+  background-color: #e2d9f3;
 }
 
 .bg-purple-200 {
-  background-color: #e2d9f3;
+  background-color: #c5b3e6;
 }
 
 .bg-purple-300 {
@@ -901,11 +901,11 @@ a {
   }
 
   .xs\:bg-purple-100 {
-    background-color: #c5b3e6;
+    background-color: #e2d9f3;
   }
 
   .xs\:bg-purple-200 {
-    background-color: #e2d9f3;
+    background-color: #c5b3e6;
   }
 
   .xs\:bg-purple-300 {
@@ -1310,11 +1310,11 @@ a {
   }
 
   .sm\:bg-purple-100 {
-    background-color: #c5b3e6;
+    background-color: #e2d9f3;
   }
 
   .sm\:bg-purple-200 {
-    background-color: #e2d9f3;
+    background-color: #c5b3e6;
   }
 
   .sm\:bg-purple-300 {
@@ -1719,11 +1719,11 @@ a {
   }
 
   .md\:bg-purple-100 {
-    background-color: #c5b3e6;
+    background-color: #e2d9f3;
   }
 
   .md\:bg-purple-200 {
-    background-color: #e2d9f3;
+    background-color: #c5b3e6;
   }
 
   .md\:bg-purple-300 {
@@ -2128,11 +2128,11 @@ a {
   }
 
   .lg\:bg-purple-100 {
-    background-color: #c5b3e6;
+    background-color: #e2d9f3;
   }
 
   .lg\:bg-purple-200 {
-    background-color: #e2d9f3;
+    background-color: #c5b3e6;
   }
 
   .lg\:bg-purple-300 {
@@ -2537,11 +2537,11 @@ a {
   }
 
   .xl\:bg-purple-100 {
-    background-color: #c5b3e6;
+    background-color: #e2d9f3;
   }
 
   .xl\:bg-purple-200 {
-    background-color: #e2d9f3;
+    background-color: #c5b3e6;
   }
 
   .xl\:bg-purple-300 {
@@ -2946,11 +2946,11 @@ a {
   }
 
   .xxl\:bg-purple-100 {
-    background-color: #c5b3e6;
+    background-color: #e2d9f3;
   }
 
   .xxl\:bg-purple-200 {
-    background-color: #e2d9f3;
+    background-color: #c5b3e6;
   }
 
   .xxl\:bg-purple-300 {
@@ -3350,11 +3350,11 @@ a {
 }
 
 .color-purple-100 {
-  color: #c5b3e6;
+  color: #e2d9f3;
 }
 
 .color-purple-200 {
-  color: #e2d9f3;
+  color: #c5b3e6;
 }
 
 .color-purple-300 {
@@ -3969,13 +3969,13 @@ a {
 }
 
 .decoration-purple-100 {
-  -webkit-text-decoration-color: #c5b3e6;
-          text-decoration-color: #c5b3e6;
+  -webkit-text-decoration-color: #e2d9f3;
+          text-decoration-color: #e2d9f3;
 }
 
 .decoration-purple-200 {
-  -webkit-text-decoration-color: #e2d9f3;
-          text-decoration-color: #e2d9f3;
+  -webkit-text-decoration-color: #c5b3e6;
+          text-decoration-color: #c5b3e6;
 }
 
 .decoration-purple-300 {
@@ -4446,11 +4446,11 @@ a {
   }
 
   .xs\:color-purple-100 {
-    color: #c5b3e6;
+    color: #e2d9f3;
   }
 
   .xs\:color-purple-200 {
-    color: #e2d9f3;
+    color: #c5b3e6;
   }
 
   .xs\:color-purple-300 {
@@ -5065,13 +5065,13 @@ a {
   }
 
   .xs\:decoration-purple-100 {
-    -webkit-text-decoration-color: #c5b3e6;
-            text-decoration-color: #c5b3e6;
+    -webkit-text-decoration-color: #e2d9f3;
+            text-decoration-color: #e2d9f3;
   }
 
   .xs\:decoration-purple-200 {
-    -webkit-text-decoration-color: #e2d9f3;
-            text-decoration-color: #e2d9f3;
+    -webkit-text-decoration-color: #c5b3e6;
+            text-decoration-color: #c5b3e6;
   }
 
   .xs\:decoration-purple-300 {
@@ -5542,11 +5542,11 @@ a {
   }
 
   .sm\:color-purple-100 {
-    color: #c5b3e6;
+    color: #e2d9f3;
   }
 
   .sm\:color-purple-200 {
-    color: #e2d9f3;
+    color: #c5b3e6;
   }
 
   .sm\:color-purple-300 {
@@ -6161,13 +6161,13 @@ a {
   }
 
   .sm\:decoration-purple-100 {
-    -webkit-text-decoration-color: #c5b3e6;
-            text-decoration-color: #c5b3e6;
+    -webkit-text-decoration-color: #e2d9f3;
+            text-decoration-color: #e2d9f3;
   }
 
   .sm\:decoration-purple-200 {
-    -webkit-text-decoration-color: #e2d9f3;
-            text-decoration-color: #e2d9f3;
+    -webkit-text-decoration-color: #c5b3e6;
+            text-decoration-color: #c5b3e6;
   }
 
   .sm\:decoration-purple-300 {
@@ -6638,11 +6638,11 @@ a {
   }
 
   .md\:color-purple-100 {
-    color: #c5b3e6;
+    color: #e2d9f3;
   }
 
   .md\:color-purple-200 {
-    color: #e2d9f3;
+    color: #c5b3e6;
   }
 
   .md\:color-purple-300 {
@@ -7257,13 +7257,13 @@ a {
   }
 
   .md\:decoration-purple-100 {
-    -webkit-text-decoration-color: #c5b3e6;
-            text-decoration-color: #c5b3e6;
+    -webkit-text-decoration-color: #e2d9f3;
+            text-decoration-color: #e2d9f3;
   }
 
   .md\:decoration-purple-200 {
-    -webkit-text-decoration-color: #e2d9f3;
-            text-decoration-color: #e2d9f3;
+    -webkit-text-decoration-color: #c5b3e6;
+            text-decoration-color: #c5b3e6;
   }
 
   .md\:decoration-purple-300 {
@@ -7734,11 +7734,11 @@ a {
   }
 
   .lg\:color-purple-100 {
-    color: #c5b3e6;
+    color: #e2d9f3;
   }
 
   .lg\:color-purple-200 {
-    color: #e2d9f3;
+    color: #c5b3e6;
   }
 
   .lg\:color-purple-300 {
@@ -8353,13 +8353,13 @@ a {
   }
 
   .lg\:decoration-purple-100 {
-    -webkit-text-decoration-color: #c5b3e6;
-            text-decoration-color: #c5b3e6;
+    -webkit-text-decoration-color: #e2d9f3;
+            text-decoration-color: #e2d9f3;
   }
 
   .lg\:decoration-purple-200 {
-    -webkit-text-decoration-color: #e2d9f3;
-            text-decoration-color: #e2d9f3;
+    -webkit-text-decoration-color: #c5b3e6;
+            text-decoration-color: #c5b3e6;
   }
 
   .lg\:decoration-purple-300 {
@@ -8830,11 +8830,11 @@ a {
   }
 
   .xl\:color-purple-100 {
-    color: #c5b3e6;
+    color: #e2d9f3;
   }
 
   .xl\:color-purple-200 {
-    color: #e2d9f3;
+    color: #c5b3e6;
   }
 
   .xl\:color-purple-300 {
@@ -9449,13 +9449,13 @@ a {
   }
 
   .xl\:decoration-purple-100 {
-    -webkit-text-decoration-color: #c5b3e6;
-            text-decoration-color: #c5b3e6;
+    -webkit-text-decoration-color: #e2d9f3;
+            text-decoration-color: #e2d9f3;
   }
 
   .xl\:decoration-purple-200 {
-    -webkit-text-decoration-color: #e2d9f3;
-            text-decoration-color: #e2d9f3;
+    -webkit-text-decoration-color: #c5b3e6;
+            text-decoration-color: #c5b3e6;
   }
 
   .xl\:decoration-purple-300 {
@@ -9926,11 +9926,11 @@ a {
   }
 
   .xxl\:color-purple-100 {
-    color: #c5b3e6;
+    color: #e2d9f3;
   }
 
   .xxl\:color-purple-200 {
-    color: #e2d9f3;
+    color: #c5b3e6;
   }
 
   .xxl\:color-purple-300 {
@@ -10545,13 +10545,13 @@ a {
   }
 
   .xxl\:decoration-purple-100 {
-    -webkit-text-decoration-color: #c5b3e6;
-            text-decoration-color: #c5b3e6;
+    -webkit-text-decoration-color: #e2d9f3;
+            text-decoration-color: #e2d9f3;
   }
 
   .xxl\:decoration-purple-200 {
-    -webkit-text-decoration-color: #e2d9f3;
-            text-decoration-color: #e2d9f3;
+    -webkit-text-decoration-color: #c5b3e6;
+            text-decoration-color: #c5b3e6;
   }
 
   .xxl\:decoration-purple-300 {
@@ -85022,11 +85022,11 @@ a {
 }
 
 .border-purple-100 {
-  border-color: #c5b3e6;
+  border-color: #e2d9f3;
 }
 
 .border-purple-200 {
-  border-color: #e2d9f3;
+  border-color: #c5b3e6;
 }
 
 .border-purple-300 {
@@ -86086,11 +86086,11 @@ a {
 }
 
 .outline-purple-100 {
-  outline-color: #c5b3e6;
+  outline-color: #e2d9f3;
 }
 
 .outline-purple-200 {
-  outline-color: #e2d9f3;
+  outline-color: #c5b3e6;
 }
 
 .outline-purple-300 {
