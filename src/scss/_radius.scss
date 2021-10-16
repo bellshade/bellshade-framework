@@ -1,21 +1,76 @@
 @use "sass:string";
 
-@mixin radius($sudut: false, $unit: rem) {
-    @for $i from 0 to 51 {
-        $num: str-replace("#{calc($i / 10)}", ".", "\\.");
-        $slice: str-slice($num, 1, 4);
+@mixin radius($unit: rem, $prefix: "") {
+    .#{$prefix}radius-circle {
+        border-radius: 50% !important;
+    }
+    .#{$prefix}radius-pill {
+        border-radius: 50rem !important;
+    }
 
-        .radius-#{$slice} {
-            border-radius: calc($i / 10) + $unit !important;
+    @for $i from 0 to 51 {
+        $num: calc($i / 10);
+        $class-num: str-replace("#{$num}", ".", "\\.");
+        $slice: str-slice($class-num, 1, 4);
+
+        // Semua sisi (semua sudut)
+        .#{$prefix}radius-#{$slice} {
+            border-radius: $num + $unit !important;
+        }
+        // Sisi atas (sudut kiri atas dan kanan atas)
+        .#{$prefix}radius-t-#{$slice} {
+            border-top-left-radius: $num + $unit !important;
+            border-top-right-radius: $num + $unit !important;
+        }
+        // Sisi bawah (sudut kiri bawah dan kanan bawah)
+        .#{$prefix}radius-b-#{$slice} {
+            border-bottom-left-radius: $num + $unit !important;
+            border-bottom-right-radius: $num + $unit !important;
+        }
+        // Sisi kiri (sudut kiri atas dan kiri bawah)
+        .#{$prefix}radius-l-#{$slice} {
+            border-top-left-radius: $num + $unit !important;
+            border-bottom-left-radius: $num + $unit !important;
+        }
+        // Sisi kanan (sudut kanan atas dan kanan bawah)
+        .#{$prefix}radius-r-#{$slice} {
+            border-top-right-radius: $num + $unit !important;
+            border-bottom-right-radius: $num + $unit !important;
+        }
+
+        // Sudut kiri atas
+        .#{$prefix}radius-tl-#{$slice} {
+            border-top-left-radius: $num + $unit !important;
+        }
+        // Sudut kanan atas
+        .#{$prefix}radius-tr-#{$slice} {
+            border-top-right-radius: $num + $unit !important;
+        }
+        // Sudut kiri bawah
+        .#{$prefix}radius-bl-#{$slice} {
+            border-bottom-left-radius: $num + $unit !important;
+        }
+        // Sudut kanan bawah
+        .#{$prefix}radius-br-#{$slice} {
+            border-bottom-right-radius: $num + $unit !important;
         }
     }
 }
 
+// Tanpa breakpoint
 @include radius();
 
-.radius-circle {
-    border-radius: 50% !important;
-}
-.radius-pill {
-    border-radius: 50rem !important;
+// .radius-circle {
+//     border-radius: 50% !important;
+// }
+// .radius-pill {
+//     border-radius: 50rem !important;
+// }
+
+// Dengan breakpoint
+@each $key, $value in $breakpoints {
+    $prefixer: $key + "\\:";
+    @include screen($key) {
+        @include radius($prefix: $prefixer);
+    }
 }
