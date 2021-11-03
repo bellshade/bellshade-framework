@@ -1,18 +1,18 @@
 @mixin shadow-color($colors, $prefix: "") {
     @each $key, $value in $colors {
+        // Box Shadow
         .#{$prefix}shadow-#{$key} {
-            --shadow-x: 0.2rem;
-            --shadow-y: 0.2rem;
-            --shadow-blur: 0.2rem;
-            box-shadow: var(--shadow-x)
-                var(--shadow-y)
-                var(--shadow-blur)
-                $value;
+            --shadow-color: #{$value} !important;
+        }
+        // Text Shadow
+        .#{$prefix}tshadow-#{$key} {
+            --text-shadow-color: #{$value} !important;
         }
     }
 }
 
 @mixin shadows($minus: false, $prefix: "") {
+    // Box Shadow
     @if $minus == false {
         @for $i from 0 to 51 {
             $num: calc($i / 10);
@@ -60,6 +60,55 @@
             }
         }
     }
+
+    // Text Shadow
+    @if $minus == false {
+        @for $i from 0 to 11 {
+            $num: calc($i / 10);
+            $class-num: str-replace("#{$num}", ".", "\\.");
+            $slice: str-slice($class-num, 1, 4);
+
+            // Shadow X
+            .#{$prefix}tshadow-x-#{$slice} {
+                --text-shadow-x: #{$num}rem !important;
+            }
+            // Shadow Y
+            .#{$prefix}tshadow-y-#{$slice} {
+                --text-shadow-y: #{$num}rem !important;
+            }
+            // Shadow X dan Y
+            .#{$prefix}tshadow-xy-#{$slice} {
+                --text-shadow-x: #{$num}rem !important;
+                --text-shadow-y: #{$num}rem !important;
+            }
+            // Shadow Blur
+            .#{$prefix}tshadow-blur-#{$slice} {
+                --text-shadow-blur: #{$num}rem !important;
+            }
+        }
+    } @else {
+        @for $i from 0 to 11 {
+            $num: calc($i / 10);
+            $class-num: str-replace("#{$num}", ".", "\\.");
+            $slice: str-slice($class-num, 1, 4);
+
+            @if $num >= 0.1 {
+                // Shadow -X
+                .#{$prefix}-tshadow-x-#{$slice} {
+                    --text-shadow-x: #{-$num}rem !important;
+                }
+                // Shadow -Y
+                .#{$prefix}-tshadow-y-#{$slice} {
+                    --text-shadow-y: #{-$num}rem !important;
+                }
+                // Shadow X dan Y
+                .#{$prefix}-tshadow-xy-#{$slice} {
+                    --text-shadow-x: #{-$num}rem !important;
+                    --text-shadow-y: #{-$num}rem !important;
+                }
+            }
+        }
+    }
 }
 
 @mixin shadows-2($prefix: "") {
@@ -67,13 +116,26 @@
     .#{$prefix}shadow-none {
         box-shadow: none;
     }
+    .#{$prefix}tshadow-none {
+        text-shadow: none;
+    }
 
     // Default Shadow
     .#{$prefix}shadow {
         --shadow-x: 0rem;
-        --shadow-y: 0.2rem;
+        --shadow-y: 0.1rem;
         --shadow-blur: 0.2rem;
-        box-shadow: var(--shadow-x) var(--shadow-y) var(--shadow-blur) $gray-200 !important;
+        --shadow-color: #{$gray-200};
+        box-shadow: var(--shadow-x) var(--shadow-y) var(--shadow-blur)
+            var(--shadow-color);
+    }
+    .#{$prefix}tshadow {
+        --text-shadow-x: 0rem;
+        --text-shadow-y: 0.1rem;
+        --text-shadow-blur: 0.1rem;
+        --text-shadow-color: #{$gray-200};
+        text-shadow: var(--text-shadow-x) var(--text-shadow-y)
+            var(--text-shadow-blur) var(--text-shadow-color);
     }
 
     // Shadow Color
@@ -82,6 +144,13 @@
         --shadow-y: 0.2rem;
         --shadow-blur: 0.2rem;
         box-shadow: var(--shadow-x) var(--shadow-y) var(--shadow-blur) $black;
+    }
+    .#{$prefix}tshadow-black {
+        --text-shadow-x: 0.2rem;
+        --text-shadow-y: 0.2rem;
+        --text-shadow-blur: 0.2rem;
+        box-shadow: var(--text-shadow-x) var(--text-shadow-y)
+            var(--text-shadow-blur) $black;
     }
     @each $key, $value in $colors {
         @include shadow-color($value, $prefix);

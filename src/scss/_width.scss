@@ -1,0 +1,30 @@
+// Width
+@mixin width($prefix: "") {
+    @for $i from 0 to 51 {
+        .#{$prefix}w-#{$i} {
+            width: $i + rem;
+        }
+        .#{$prefix}w-#{$i}\.5 {
+            width: calc($i + 0.5) + rem;
+        }
+    }
+
+    @for $i from 1 to 21 {
+        $num: calc(5% * $i);
+        $class-num: calc(5 * $i);
+        .#{$prefix}w-#{$class-num}\% {
+            width: $num;
+        }
+    }
+}
+
+// Tanpa breakpoint
+@include width();
+
+// Dengan breakpoint
+@each $key, $value in $breakpoints {
+    $prefix: $key + "\\:";
+    @include screen($key) {
+        @include width($prefix);
+    }
+}

@@ -353,6 +353,11 @@ template {
 /**
    * Reset by BshadeUI
    */
+
+* {
+    box-sizing: border-box;
+}
+
 body {
     font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue",
         Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji",
