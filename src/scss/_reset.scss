@@ -386,3 +386,11 @@ a {
     color: inherit;
     text-decoration: inherit;
 }
+
+button {
+    cursor: pointer;
+}
+
+button[disabled] {
+    cursor: not-allowed;
+}
