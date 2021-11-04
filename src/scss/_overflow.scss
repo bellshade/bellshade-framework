@@ -1,0 +1,41 @@
+@mixin overflow($sumbu: false, $prefix: "") {
+    $overflow: (auto, hidden, scroll, visible) !default;
+
+    @if $sumbu == false {
+        @each $value in $overflow {
+            .#{$prefix}overflow-#{$value} {
+                overflow: $value;
+            }
+        }
+    } @else {
+        @if $sumbu == x {
+            @each $value in $overflow {
+                .#{$prefix}overflow-x-#{$value} {
+                    overflow-x: $value;
+                }
+            }
+        }
+        @if $sumbu == y {
+            @each $value in $overflow {
+                .#{$prefix}overflow-y-#{$value} {
+                    overflow-y: $value;
+                }
+            }
+        }
+    }
+}
+
+@include overflow();
+
+@include overflow($sumbu: x);
+@include overflow($sumbu: y);
+
+@each $key, $value in $breakpoints {
+    $prefix: $key + "\\:";
+    @include screen($key) {
+        @include overflow($prefix: $prefix);
+
+        @include overflow($sumbu: x, $prefix: $prefix);
+        @include overflow($sumbu: y, $prefix: $prefix);
+    }
+}
