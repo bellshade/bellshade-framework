@@ -18,266 +18,464 @@ $cyan: #0dcaf0 !default;
 // Tingkat warna
 $gray-50: mix(white, $gray, 90%) !default;
 $gray-100: mix(white, $gray, 80%) !default;
+$gray-150: mix(white, $gray, 70%) !default;
 $gray-200: mix(white, $gray, 60%) !default;
+$gray-250: mix(white, $gray, 50%) !default;
 $gray-300: mix(white, $gray, 40%) !default;
+$gray-350: mix(white, $gray, 30%) !default;
 $gray-400: mix(white, $gray, 20%) !default;
+$gray-450: mix(white, $gray, 10%) !default;
 $gray-500: $gray !default;
+$gray-550: mix(black, $gray, 10%) !default;
 $gray-600: mix(black, $gray, 20%) !default;
+$gray-650: mix(black, $gray, 30%) !default;
 $gray-700: mix(black, $gray, 40%) !default;
+$gray-750: mix(black, $gray, 50%) !default;
 $gray-800: mix(black, $gray, 60%) !default;
+$gray-850: mix(black, $gray, 70%) !default;
 $gray-900: mix(black, $gray, 80%) !default;
+$gray-950: mix(black, $gray, 90%) !default;
 
 $blue-50: mix(white, $blue, 90%) !default;
 $blue-100: mix(white, $blue, 80%) !default;
+$blue-150: mix(white, $blue, 70%) !default;
 $blue-200: mix(white, $blue, 60%) !default;
+$blue-250: mix(white, $blue, 50%) !default;
 $blue-300: mix(white, $blue, 40%) !default;
+$blue-350: mix(white, $blue, 30%) !default;
 $blue-400: mix(white, $blue, 20%) !default;
+$blue-450: mix(white, $blue, 10%) !default;
 $blue-500: $blue !default;
+$blue-550: mix(black, $blue, 10%) !default;
 $blue-600: mix(black, $blue, 20%) !default;
+$blue-650: mix(black, $blue, 30%) !default;
 $blue-700: mix(black, $blue, 40%) !default;
+$blue-750: mix(black, $blue, 50%) !default;
 $blue-800: mix(black, $blue, 60%) !default;
+$blue-850: mix(black, $blue, 70%) !default;
 $blue-900: mix(black, $blue, 80%) !default;
+$blue-950: mix(black, $blue, 90%) !default;
 
 $indigo-50: mix(white, $indigo, 90%) !default;
 $indigo-100: mix(white, $indigo, 80%) !default;
+$indigo-150: mix(white, $indigo, 70%) !default;
 $indigo-200: mix(white, $indigo, 60%) !default;
+$indigo-250: mix(white, $indigo, 50%) !default;
 $indigo-300: mix(white, $indigo, 40%) !default;
+$indigo-350: mix(white, $indigo, 30%) !default;
 $indigo-400: mix(white, $indigo, 20%) !default;
+$indigo-450: mix(white, $indigo, 10%) !default;
 $indigo-500: $indigo !default;
+$indigo-550: mix(black, $indigo, 10%) !default;
 $indigo-600: mix(black, $indigo, 20%) !default;
+$indigo-650: mix(black, $indigo, 30%) !default;
 $indigo-700: mix(black, $indigo, 40%) !default;
+$indigo-750: mix(black, $indigo, 50%) !default;
 $indigo-800: mix(black, $indigo, 60%) !default;
+$indigo-850: mix(black, $indigo, 70%) !default;
 $indigo-900: mix(black, $indigo, 80%) !default;
+$indigo-950: mix(black, $indigo, 90%) !default;
 
 $purple-50: mix(white, $purple, 90%) !default;
 $purple-100: mix(white, $purple, 80%) !default;
+$purple-150: mix(white, $purple, 70%) !default;
 $purple-200: mix(white, $purple, 60%) !default;
+$purple-250: mix(white, $purple, 50%) !default;
 $purple-300: mix(white, $purple, 40%) !default;
+$purple-350: mix(white, $purple, 30%) !default;
 $purple-400: mix(white, $purple, 20%) !default;
+$purple-450: mix(white, $purple, 10%) !default;
 $purple-500: $purple !default;
+$purple-550: mix(black, $purple, 10%) !default;
 $purple-600: mix(black, $purple, 20%) !default;
+$purple-650: mix(black, $purple, 30%) !default;
 $purple-700: mix(black, $purple, 40%) !default;
+$purple-750: mix(black, $purple, 50%) !default;
 $purple-800: mix(black, $purple, 60%) !default;
+$purple-850: mix(black, $purple, 70%) !default;
 $purple-900: mix(black, $purple, 80%) !default;
+$purple-950: mix(black, $purple, 90%) !default;
 
 $pink-50: mix(white, $pink, 90%) !default;
 $pink-100: mix(white, $pink, 80%) !default;
+$pink-150: mix(white, $pink, 70%) !default;
 $pink-200: mix(white, $pink, 60%) !default;
+$pink-250: mix(white, $pink, 50%) !default;
 $pink-300: mix(white, $pink, 40%) !default;
+$pink-350: mix(white, $pink, 30%) !default;
 $pink-400: mix(white, $pink, 20%) !default;
+$pink-450: mix(white, $pink, 10%) !default;
 $pink-500: $pink !default;
+$pink-550: mix(black, $pink, 10%) !default;
 $pink-600: mix(black, $pink, 20%) !default;
+$pink-650: mix(black, $pink, 30%) !default;
 $pink-700: mix(black, $pink, 40%) !default;
+$pink-750: mix(black, $pink, 50%) !default;
 $pink-800: mix(black, $pink, 60%) !default;
+$pink-850: mix(black, $pink, 70%) !default;
 $pink-900: mix(black, $pink, 80%) !default;
+$pink-950: mix(black, $pink, 90%) !default;
 
 $red-50: mix(white, $red, 90%) !default;
 $red-100: mix(white, $red, 80%) !default;
+$red-150: mix(white, $red, 70%) !default;
 $red-200: mix(white, $red, 60%) !default;
+$red-250: mix(white, $red, 50%) !default;
 $red-300: mix(white, $red, 40%) !default;
+$red-350: mix(white, $red, 30%) !default;
 $red-400: mix(white, $red, 20%) !default;
+$red-450: mix(white, $red, 10%) !default;
 $red-500: $red !default;
+$red-550: mix(black, $red, 10%) !default;
 $red-600: mix(black, $red, 20%) !default;
+$red-650: mix(black, $red, 30%) !default;
 $red-700: mix(black, $red, 40%) !default;
+$red-750: mix(black, $red, 50%) !default;
 $red-800: mix(black, $red, 60%) !default;
+$red-850: mix(black, $red, 70%) !default;
 $red-900: mix(black, $red, 80%) !default;
+$red-950: mix(black, $red, 90%) !default;
 
 $orange-50: mix(white, $orange, 90%) !default;
 $orange-100: mix(white, $orange, 80%) !default;
+$orange-150: mix(white, $orange, 70%) !default;
 $orange-200: mix(white, $orange, 60%) !default;
+$orange-250: mix(white, $orange, 50%) !default;
 $orange-300: mix(white, $orange, 40%) !default;
+$orange-350: mix(white, $orange, 30%) !default;
 $orange-400: mix(white, $orange, 20%) !default;
+$orange-450: mix(white, $orange, 10%) !default;
 $orange-500: $orange !default;
+$orange-550: mix(black, $orange, 10%) !default;
 $orange-600: mix(black, $orange, 20%) !default;
+$orange-650: mix(black, $orange, 30%) !default;
 $orange-700: mix(black, $orange, 40%) !default;
+$orange-750: mix(black, $orange, 50%) !default;
 $orange-800: mix(black, $orange, 60%) !default;
+$orange-850: mix(black, $orange, 70%) !default;
 $orange-900: mix(black, $orange, 80%) !default;
+$orange-950: mix(black, $orange, 90%) !default;
 
 $yellow-50: mix(white, $yellow, 90%) !default;
 $yellow-100: mix(white, $yellow, 80%) !default;
+$yellow-150: mix(white, $yellow, 70%) !default;
 $yellow-200: mix(white, $yellow, 60%) !default;
+$yellow-250: mix(white, $yellow, 50%) !default;
 $yellow-300: mix(white, $yellow, 40%) !default;
+$yellow-350: mix(white, $yellow, 30%) !default;
 $yellow-400: mix(white, $yellow, 20%) !default;
+$yellow-450: mix(white, $yellow, 10%) !default;
 $yellow-500: $yellow !default;
+$yellow-550: mix(black, $yellow, 10%) !default;
 $yellow-600: mix(black, $yellow, 20%) !default;
+$yellow-650: mix(black, $yellow, 30%) !default;
 $yellow-700: mix(black, $yellow, 40%) !default;
+$yellow-750: mix(black, $yellow, 50%) !default;
 $yellow-800: mix(black, $yellow, 60%) !default;
+$yellow-850: mix(black, $yellow, 70%) !default;
 $yellow-900: mix(black, $yellow, 80%) !default;
+$yellow-950: mix(black, $yellow, 90%) !default;
 
 $green-50: mix(white, $green, 90%) !default;
 $green-100: mix(white, $green, 80%) !default;
+$green-150: mix(white, $green, 70%) !default;
 $green-200: mix(white, $green, 60%) !default;
+$green-250: mix(white, $green, 50%) !default;
 $green-300: mix(white, $green, 40%) !default;
+$green-350: mix(white, $green, 30%) !default;
 $green-400: mix(white, $green, 20%) !default;
+$green-450: mix(white, $green, 10%) !default;
 $green-500: $green !default;
+$green-550: mix(black, $green, 10%) !default;
 $green-600: mix(black, $green, 20%) !default;
+$green-650: mix(black, $green, 30%) !default;
 $green-700: mix(black, $green, 40%) !default;
+$green-750: mix(black, $green, 50%) !default;
 $green-800: mix(black, $green, 60%) !default;
+$green-850: mix(black, $green, 70%) !default;
 $green-900: mix(black, $green, 80%) !default;
+$green-950: mix(black, $green, 90%) !default;
 
 $teal-50: mix(white, $teal, 90%) !default;
 $teal-100: mix(white, $teal, 80%) !default;
+$teal-150: mix(white, $teal, 70%) !default;
 $teal-200: mix(white, $teal, 60%) !default;
+$teal-250: mix(white, $teal, 50%) !default;
 $teal-300: mix(white, $teal, 40%) !default;
+$teal-350: mix(white, $teal, 30%) !default;
 $teal-400: mix(white, $teal, 20%) !default;
+$teal-450: mix(white, $teal, 10%) !default;
 $teal-500: $teal !default;
+$teal-550: mix(black, $teal, 10%) !default;
 $teal-600: mix(black, $teal, 20%) !default;
+$teal-650: mix(black, $teal, 30%) !default;
 $teal-700: mix(black, $teal, 40%) !default;
+$teal-750: mix(black, $teal, 50%) !default;
 $teal-800: mix(black, $teal, 60%) !default;
+$teal-850: mix(black, $teal, 70%) !default;
 $teal-900: mix(black, $teal, 80%) !default;
+$teal-950: mix(black, $teal, 90%) !default;
 
 $cyan-50: mix(white, $cyan, 90%) !default;
 $cyan-100: mix(white, $cyan, 80%) !default;
+$cyan-150: mix(white, $cyan, 70%) !default;
 $cyan-200: mix(white, $cyan, 60%) !default;
+$cyan-250: mix(white, $cyan, 50%) !default;
 $cyan-300: mix(white, $cyan, 40%) !default;
+$cyan-350: mix(white, $cyan, 30%) !default;
 $cyan-400: mix(white, $cyan, 20%) !default;
+$cyan-450: mix(white, $cyan, 10%) !default;
 $cyan-500: $cyan !default;
+$cyan-550: mix(black, $cyan, 10%) !default;
 $cyan-600: mix(black, $cyan, 20%) !default;
+$cyan-650: mix(black, $cyan, 30%) !default;
 $cyan-700: mix(black, $cyan, 40%) !default;
+$cyan-750: mix(black, $cyan, 50%) !default;
 $cyan-800: mix(black, $cyan, 60%) !default;
+$cyan-850: mix(black, $cyan, 70%) !default;
 $cyan-900: mix(black, $cyan, 80%) !default;
+$cyan-950: mix(black, $cyan, 90%) !default;
 
 $grays: (
     "gray-50": $gray-50,
     "gray-100": $gray-100,
+    "gray-150": $gray-150,
     "gray-200": $gray-200,
+    "gray-250": $gray-250,
     "gray-300": $gray-300,
+    "gray-350": $gray-350,
     "gray-400": $gray-400,
+    "gray-450": $gray-450,
     "gray-500": $gray-500,
+    "gray-550": $gray-550,
     "gray-600": $gray-600,
+    "gray-650": $gray-650,
     "gray-700": $gray-700,
+    "gray-750": $gray-750,
     "gray-800": $gray-800,
-    "gray-900": $gray-900
+    "gray-850": $gray-850,
+    "gray-900": $gray-900,
+    "gray-950": $gray-950
 ) !default;
 
 $blues: (
     "blue-50": $blue-50,
     "blue-100": $blue-100,
+    "blue-150": $blue-150,
     "blue-200": $blue-200,
+    "blue-250": $blue-250,
     "blue-300": $blue-300,
+    "blue-350": $blue-350,
     "blue-400": $blue-400,
+    "blue-450": $blue-450,
     "blue-500": $blue-500,
+    "blue-550": $blue-550,
     "blue-600": $blue-600,
+    "blue-650": $blue-650,
     "blue-700": $blue-700,
+    "blue-750": $blue-750,
     "blue-800": $blue-800,
-    "blue-900": $blue-900
+    "blue-850": $blue-850,
+    "blue-900": $blue-900,
+    "blue-950": $blue-950
 ) !default;
 
 $indigos: (
     "indigo-50": $indigo-50,
     "indigo-100": $indigo-100,
+    "indigo-150": $indigo-150,
     "indigo-200": $indigo-200,
+    "indigo-250": $indigo-250,
     "indigo-300": $indigo-300,
+    "indigo-350": $indigo-350,
     "indigo-400": $indigo-400,
+    "indigo-450": $indigo-450,
     "indigo-500": $indigo-500,
+    "indigo-550": $indigo-550,
     "indigo-600": $indigo-600,
+    "indigo-650": $indigo-650,
     "indigo-700": $indigo-700,
+    "indigo-750": $indigo-750,
     "indigo-800": $indigo-800,
-    "indigo-900": $indigo-900
+    "indigo-850": $indigo-850,
+    "indigo-900": $indigo-900,
+    "indigo-950": $indigo-950
 ) !default;
 
 $purples: (
     "purple-50": $purple-50,
     "purple-100": $purple-100,
+    "purple-150": $purple-150,
     "purple-200": $purple-200,
+    "purple-250": $purple-250,
     "purple-300": $purple-300,
+    "purple-350": $purple-350,
     "purple-400": $purple-400,
+    "purple-450": $purple-450,
     "purple-500": $purple-500,
+    "purple-550": $purple-550,
     "purple-600": $purple-600,
+    "purple-650": $purple-650,
     "purple-700": $purple-700,
+    "purple-750": $purple-750,
     "purple-800": $purple-800,
-    "purple-900": $purple-900
+    "purple-850": $purple-850,
+    "purple-900": $purple-900,
+    "purple-950": $purple-950
 ) !default;
 
 $pinks: (
     "pink-50": $pink-50,
     "pink-100": $pink-100,
+    "pink-150": $pink-150,
     "pink-200": $pink-200,
+    "pink-250": $pink-250,
     "pink-300": $pink-300,
+    "pink-350": $pink-350,
     "pink-400": $pink-400,
+    "pink-450": $pink-450,
     "pink-500": $pink-500,
+    "pink-550": $pink-550,
     "pink-600": $pink-600,
+    "pink-650": $pink-650,
     "pink-700": $pink-700,
+    "pink-750": $pink-750,
     "pink-800": $pink-800,
-    "pink-900": $pink-900
+    "pink-850": $pink-850,
+    "pink-900": $pink-900,
+    "pink-950": $pink-950
 ) !default;
 
 $reds: (
     "red-50": $red-50,
     "red-100": $red-100,
+    "red-150": $red-150,
     "red-200": $red-200,
+    "red-250": $red-250,
     "red-300": $red-300,
+    "red-350": $red-350,
     "red-400": $red-400,
+    "red-450": $red-450,
     "red-500": $red-500,
+    "red-550": $red-550,
     "red-600": $red-600,
+    "red-650": $red-650,
     "red-700": $red-700,
+    "red-750": $red-750,
     "red-800": $red-800,
-    "red-900": $red-900
+    "red-850": $red-850,
+    "red-900": $red-900,
+    "red-950": $red-950
 ) !default;
 
 $oranges: (
     "orange-50": $orange-50,
     "orange-100": $orange-100,
+    "orange-150": $orange-150,
     "orange-200": $orange-200,
+    "orange-250": $orange-250,
     "orange-300": $orange-300,
+    "orange-350": $orange-350,
     "orange-400": $orange-400,
+    "orange-450": $orange-450,
     "orange-500": $orange-500,
+    "orange-550": $orange-550,
     "orange-600": $orange-600,
+    "orange-650": $orange-650,
     "orange-700": $orange-700,
+    "orange-750": $orange-750,
     "orange-800": $orange-800,
-    "orange-900": $orange-900
+    "orange-850": $orange-850,
+    "orange-900": $orange-900,
+    "orange-950": $orange-950
 ) !default;
 
 $yellows: (
     "yellow-50": $yellow-50,
     "yellow-100": $yellow-100,
+    "yellow-150": $yellow-150,
     "yellow-200": $yellow-200,
+    "yellow-250": $yellow-250,
     "yellow-300": $yellow-300,
+    "yellow-350": $yellow-350,
     "yellow-400": $yellow-400,
+    "yellow-450": $yellow-450,
     "yellow-500": $yellow-500,
+    "yellow-550": $yellow-550,
     "yellow-600": $yellow-600,
+    "yellow-650": $yellow-650,
     "yellow-700": $yellow-700,
+    "yellow-750": $yellow-750,
     "yellow-800": $yellow-800,
-    "yellow-900": $yellow-900
+    "yellow-850": $yellow-850,
+    "yellow-900": $yellow-900,
+    "yellow-950": $yellow-950
 ) !default;
 
 $greens: (
     "green-50": $green-50,
     "green-100": $green-100,
+    "green-150": $green-150,
     "green-200": $green-200,
+    "green-250": $green-250,
     "green-300": $green-300,
+    "green-350": $green-350,
     "green-400": $green-400,
+    "green-450": $green-450,
     "green-500": $green-500,
+    "green-550": $green-550,
     "green-600": $green-600,
+    "green-650": $green-650,
     "green-700": $green-700,
+    "green-750": $green-750,
     "green-800": $green-800,
-    "green-900": $green-900
+    "green-850": $green-850,
+    "green-900": $green-900,
+    "green-950": $green-950
 ) !default;
 
 $teals: (
     "teal-50": $teal-50,
     "teal-100": $teal-100,
+    "teal-150": $teal-150,
     "teal-200": $teal-200,
+    "teal-250": $teal-250,
     "teal-300": $teal-300,
+    "teal-350": $teal-350,
     "teal-400": $teal-400,
+    "teal-450": $teal-450,
     "teal-500": $teal-500,
+    "teal-550": $teal-550,
     "teal-600": $teal-600,
+    "teal-650": $teal-650,
     "teal-700": $teal-700,
+    "teal-750": $teal-750,
     "teal-800": $teal-800,
-    "teal-900": $teal-900
+    "teal-850": $teal-850,
+    "teal-900": $teal-900,
+    "teal-950": $teal-950
 ) !default;
 
 $cyans: (
     "cyan-50": $cyan-50,
     "cyan-100": $cyan-100,
+    "cyan-150": $cyan-150,
     "cyan-200": $cyan-200,
+    "cyan-250": $cyan-250,
     "cyan-300": $cyan-300,
+    "cyan-350": $cyan-350,
     "cyan-400": $cyan-400,
+    "cyan-450": $cyan-450,
     "cyan-500": $cyan-500,
+    "cyan-550": $cyan-550,
     "cyan-600": $cyan-600,
+    "cyan-650": $cyan-650,
     "cyan-700": $cyan-700,
+    "cyan-750": $cyan-750,
     "cyan-800": $cyan-800,
-    "cyan-900": $cyan-900
+    "cyan-850": $cyan-850,
+    "cyan-900": $cyan-900,
+    "cyan-950": $cyan-950
 ) !default;
 
 $colors: (
