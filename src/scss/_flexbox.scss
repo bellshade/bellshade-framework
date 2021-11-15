@@ -11,12 +11,7 @@
     max-width: 100%;
 }
 
-@mixin flexbox($screen: false) {
-    $prefix: "";
-    @if $screen {
-        $prefix: $screen + "\\:";
-    }
-
+@mixin flexbox($prefix: '') {
     // Cols per Row
     @for $i from 1 to 7 {
         .#{$prefix}row-cols-#{$i} > * {
@@ -225,6 +220,19 @@
             align-self: $position;
         }
     }
+
+    // Flex Wrap
+    $flex-wrap-values: (
+        "nowrap": nowrap,
+        "wrap": wrap,
+        "wrap-reverse": wrap-reverse
+    ) !default;
+
+    @each $key, $value in $flex-wrap-values {
+        .#{$prefix}flex-#{$key} {
+            flex-wrap: $value;
+        }
+    }
 }
 
 // Tanpa breakpoint
@@ -232,7 +240,8 @@
 
 // Dengan breakpoint
 @each $key, $value in $breakpoints {
+    $prefix: $key + "\\:";
     @include screen($key) {
-        @include flexbox($key);
+        @include flexbox($prefix);
     }
 }

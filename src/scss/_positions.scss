@@ -1,0 +1,24 @@
+@mixin position($prefix: "") {
+    $position-values: (
+        static,
+        absolute,
+        fixed,
+        relative,
+        sticky
+    ) !default;
+
+    @each $value in $position-values {
+        .#{$prefix}#{$value} {
+            position: $value;
+        }
+    }
+}
+
+@include position();
+
+@each $key, $value in $breakpoints { 
+    $prefix: $key + "\\:"; 
+    @include screen($key) { 
+        @include position($prefix); 
+    } 
+} 
