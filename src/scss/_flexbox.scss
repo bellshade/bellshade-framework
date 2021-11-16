@@ -1,0 +1,247 @@
+// Row
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+// Semua col
+.row > * {
+    flex-shrink: 0;
+    width: 100%;
+    max-width: 100%;
+}
+
+@mixin flexbox($prefix: '') {
+    // Cols per Row
+    @for $i from 1 to 7 {
+        .#{$prefix}row-cols-#{$i} > * {
+            flex: 0 0 auto;
+            width: calc(100% / $i);
+        }
+    }
+
+    // Col
+    @for $i from 1 to 13 {
+        .#{$prefix}col-#{$i} {
+            flex: 0 0 auto;
+            width: calc(100% / (12 / $i));
+        }
+    }
+
+    // Flex Flow
+    $flow: (
+        "col": column,
+        "col-reverse": column-reverse,
+        "inherit": inherit,
+        "initial": initial,
+        "nowrap": nowrap,
+        "revert": revert,
+        "row": row,
+        "row-reverse": row-reverse,
+        "unset": unset,
+        "wrap": wrap,
+        "wrap-reverse": wrap-reverse
+    ) !default;
+
+    @each $key, $value in $flow {
+        .#{$prefix}flow-#{$key} {
+            flex-flow: $value;
+        }
+    }
+
+    // Flex Direction
+    $flex-direction: (
+        "col": column,
+        "col-reverse": column-reverse,
+        "inherit": inherit,
+        "initial": initial,
+        "revert": revert,
+        "row": row,
+        "row-reverse": row-reverse,
+        "unse": unset
+    ) !default;
+
+    @each $key, $value in $flex-direction {
+        .#{$prefix}direction-#{$key} {
+            flex-direction: $value;
+        }
+    }
+
+    // Justify Content
+    $justify-content-values: (
+        "center": center,
+        "end": end,
+        "flex-end": flex-end,
+        "flex-start": flex-start,
+        "inherit": inherit,
+        "initial": initial,
+        "left": left,
+        "normal": normal,
+        "revert": revert,
+        "right": right,
+        "around": space-around,
+        "between": space-between,
+        "evenly": space-evenly,
+        "start": start,
+        "stretch": stretch,
+        "unset": unset
+    ) !default;
+
+    @each $key, $position in $justify-content-values {
+        .#{$prefix}justify-content-#{$key} {
+            justify-content: $position;
+        }
+    }
+
+    // Justify Self
+    $justify-self-values: (
+        "auto": auto,
+        "baseline": baseline,
+        "center": center,
+        "end": end,
+        "flex-end": flex-end,
+        "flex-start": flex-start,
+        "inherit": inherit,
+        "initial": initial,
+        "left": left,
+        "normal": normal,
+        "revert": revert,
+        "right": right,
+        "self-end": self-end,
+        "self-start": self-start,
+        "start": start,
+        "stretch": stretch,
+        "unset": unset
+    ) !default;
+
+    @each $key, $position in $justify-self-values {
+        .#{$prefix}justify-self-#{$key} {
+            justify-self: $position;
+        }
+    }
+
+    // Justify Items
+    $justify-items-values: (
+        "baseline": baseline,
+        "center": center,
+        "end": end,
+        "flex-end": flex-end,
+        "flex-start": flex-start,
+        "inherit": inherit,
+        "initial": initial,
+        "left": left,
+        "legacy": legacy,
+        "normal": normal,
+        "revert": revert,
+        "right": right,
+        "self-end": self-end,
+        "self-start": self-start,
+        "start": start,
+        "stretch": stretch,
+        "unset": unset
+    ) !default;
+
+    @each $key, $position in $justify-items-values {
+        .#{$prefix}justify-items-#{$key} {
+            justify-items: $position;
+        }
+    }
+
+    // Align Content
+    $align-content-values: (
+        "baseline": baseline,
+        "center": center,
+        "end": end,
+        "flex-end": flex-end,
+        "flex-start": flex-start,
+        "inherit": inherit,
+        "initial": initial,
+        "normal": normal,
+        "revert": revert,
+        "around": space-around,
+        "between": space-between,
+        "evenly": space-evenly,
+        "start": start,
+        "stretch": stretch,
+        "unset": unset
+    ) !default;
+
+    @each $key, $position in $align-content-values {
+        .#{$prefix}align-content-#{$key} {
+            align-content: $position;
+        }
+    }
+
+    // Align Items
+    $align-items-values: (
+        "baseline": baseline,
+        "center": center,
+        "end": end,
+        "flex-end": flex-end,
+        "flex-start": flex-start,
+        "inherit": inherit,
+        "initial": initial,
+        "normal": normal,
+        "revert": revert,
+        "self-end": self-end,
+        "self-start": self-start,
+        "start": start,
+        "stretch": stretch,
+        "unset": unset
+    ) !default;
+
+    @each $key, $position in $align-items-values {
+        .#{$prefix}align-items-#{$key} {
+            align-items: $position;
+        }
+    }
+
+    // Align Self
+    $align-self-values: (
+        "auto": auto,
+        "baseline": baseline,
+        "center": center,
+        "end": end,
+        "flex-end": flex-end,
+        "flex-start": flex-start,
+        "inherit": inherit,
+        "initial": initial,
+        "normal": normal,
+        "revert": revert,
+        "self-end": self-end,
+        "self-start": self-start,
+        "start": start,
+        "stretch": stretch,
+        "unset": unset
+    ) !default;
+
+    @each $key, $position in $align-self-values {
+        .#{$prefix}align-self-#{$key} {
+            align-self: $position;
+        }
+    }
+
+    // Flex Wrap
+    $flex-wrap-values: (
+        "nowrap": nowrap,
+        "wrap": wrap,
+        "wrap-reverse": wrap-reverse
+    ) !default;
+
+    @each $key, $value in $flex-wrap-values {
+        .#{$prefix}flex-#{$key} {
+            flex-wrap: $value;
+        }
+    }
+}
+
+// Tanpa breakpoint
+@include flexbox();
+
+// Dengan breakpoint
+@each $key, $value in $breakpoints {
+    $prefix: $key + "\\:";
+    @include screen($key) {
+        @include flexbox($prefix);
+    }
+}

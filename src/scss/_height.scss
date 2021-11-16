@@ -1,0 +1,30 @@
+// Height
+@mixin height($prefix: "") {
+    @for $i from 0 to 51 {
+        .#{$prefix}h-#{$i} {
+            height: $i + rem;
+        }
+        .#{$prefix}h-#{$i}\.5 {
+            height: calc($i + 0.5) + rem;
+        }
+    }
+
+    @for $i from 1 to 21 {
+        $num: calc(5% * $i);
+        $class-num: calc(5 * $i);
+        .#{$prefix}h-#{$class-num}\% {
+            height: $num;
+        }
+    }
+}
+
+// Tanpa breakpoint
+@include height();
+
+// Dengan breakpoint
+@each $key, $value in $breakpoints {
+    $prefix: $key + "\\:";
+    @include screen($key) {
+        @include height($prefix);
+    }
+}

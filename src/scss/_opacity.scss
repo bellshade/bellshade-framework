@@ -1,0 +1,20 @@
+@mixin opacity($prefix: "") {
+    @for $i from 1 through 20 {
+        $num: calc(5 * $i);
+
+        .#{$prefix}opacity-#{$num} {
+            opacity: calc(0.01 * $num);
+        }
+    }
+}
+
+// Tanpa breakpoint
+@include opacity();
+
+// Dengan breakpoint
+@each $key, $value in $breakpoints {
+    $prefix: $key + "\\:";
+    @include screen($key) {
+        @include opacity($prefix);
+    }
+}

@@ -1,0 +1,129 @@
+@mixin margin(
+    $direction: false,
+    $unit: rem,
+    $minus: false,
+    $sumbu: false,
+    $screen: false
+) {
+    $prefix: "";
+    @if $screen != false {
+        $prefix: $screen + "\\:";
+    }
+
+    @if $minus == false {
+        @if $sumbu == false {
+            @for $i from 0 to 101 {
+                $num: calc($i / 10);
+                $class-num: str-replace("#{$num}", ".", "\\.");
+                $slice: str-slice($class-num, 1, 4);
+
+                @if $direction == false {
+                    .#{$prefix}m-#{$slice} {
+                        margin: $num + $unit !important;
+                    }
+                } @else if $direction == t {
+                    .#{$prefix}mt-#{$slice} {
+                        margin-top: $num + $unit !important;
+                    }
+                } @else if $direction == b {
+                    .#{$prefix}mb-#{$slice} {
+                        margin-bottom: $num + $unit !important;
+                    }
+                } @else if $direction == l {
+                    .#{$prefix}ml-#{$slice} {
+                        margin-left: $num + $unit !important;
+                    }
+                } @else if $direction == r {
+                    .#{$prefix}mr-#{$slice} {
+                        margin-right: $num + $unit !important;
+                    }
+                }
+            }
+        } @else {
+            @for $i from 0 to 101 {
+                $num: calc($i / 10);
+                $class-num: str-replace("#{$num}", ".", "\\.");
+                $slice: str-slice($class-num, 1, 4);
+
+                @if $sumbu == x {
+                    .#{$prefix}mx-#{$slice} {
+                        margin-left: $num + $unit !important;
+                        margin-right: $num + $unit !important;
+                    }
+                } @else if $sumbu == y {
+                    .#{$prefix}my-#{$slice} {
+                        margin-top: $num + $unit !important;
+                        margin-bottom: $num + $unit !important;
+                    }
+                }
+            }
+        }
+    } @else {
+        @for $i from 0 to 101 {
+            $num: calc($i / 10);
+            $class-num: str-replace("#{$num}", ".", "\\.");
+            $slice: str-slice($class-num, 1, 4);
+
+            @if $num >= 0.1 {
+                @if $direction == t {
+                    .#{$prefix}-mt-#{$slice} {
+                        margin-top: -$num + $unit !important;
+                    }
+                } @else if $direction == b {
+                    .#{$prefix}-mb-#{$slice} {
+                        margin-bottom: -$num + $unit !important;
+                    }
+                } @else if $direction == l {
+                    .#{$prefix}-ml-#{$slice} {
+                        margin-left: -$num + $unit !important;
+                    }
+                } @else if $direction == r {
+                    .#{$prefix}-mr-#{$slice} {
+                        margin-right: -$num + $unit !important;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Positif
+@include margin();
+@include margin(t);
+@include margin(b);
+@include margin(l);
+@include margin(r);
+
+// Negatif
+@include margin($minus: true);
+@include margin(t, $minus: true);
+@include margin(b, $minus: true);
+@include margin(l, $minus: true);
+@include margin(r, $minus: true);
+
+// Sumbu
+@include margin($sumbu: x);
+@include margin($sumbu: y);
+
+// Margin pada breakpoint tertentu
+@each $key, $value in $breakpoints {
+    @include screen($key) {
+        // Positif
+        @include margin($screen: $key);
+        @include margin(t, $screen: $key);
+        @include margin(b, $screen: $key);
+        @include margin(l, $screen: $key);
+        @include margin(r, $screen: $key);
+
+        // Negatif
+        @include margin($minus: true, $screen: $key);
+        @include margin(t, $minus: true, $screen: $key);
+        @include margin(b, $minus: true, $screen: $key);
+        @include margin(l, $minus: true, $screen: $key);
+        @include margin(r, $minus: true, $screen: $key);
+
+        // Sumbu
+        @include margin($sumbu: x, $screen: $key);
+        @include margin($sumbu: y, $screen: $key);
+    }
+}

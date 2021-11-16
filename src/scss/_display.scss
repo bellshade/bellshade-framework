@@ -1,0 +1,52 @@
+@mixin display($screen: false) {
+    $prefix: "";
+    @if $screen {
+        $prefix: $screen + "\\:";
+    }
+
+    $display: (
+        block,
+        contents,
+        flex,
+        flex-root,
+        grid,
+        inherit,
+        initial,
+        inline,
+        inline-block,
+        inline-flex,
+        inline-grid,
+        inline-table,
+        list-item,
+        none,
+        revert,
+        table,
+        table-caption,
+        table-cell,
+        table-column,
+        table-column-group,
+        table-footer-group,
+        table-header-group,
+        table-row,
+        table-row-group,
+        unset,
+        -webkit-box,
+        -webkit-inline-box
+    ) !default;
+
+    @each $dis in $display {
+        .#{$prefix}#{$dis} {
+            display: $dis;
+        }
+    }
+}
+
+// Tanpa breakpoint
+@include display();
+
+// Dengan breakpoint
+@each $key, $value in $breakpoints {
+    @include screen($key) {
+        @include display($key);
+    }
+}

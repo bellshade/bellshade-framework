@@ -1,0 +1,37 @@
+{
+    "name": "bellshade-framework",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "dev:css": "sass src/scss/BshadeUI.scss:dev/css/BshadeUI.css",
+        "dev:prefix": "postcss dev/css/BshadeUI.css --use=autoprefixer --output=dev/css/BshadeUI.css",
+        "dev:minify": "sass dev/css/BshadeUI.css:dev/css/BshadeUI.min.css --style compressed",
+        "dev": "npm run dev:css && npm run dev:prefix && npm run dev:minify",
+        "prod:css": "sass src/scss/BshadeUI.scss:dist/css/BshadeUI.css",
+        "prod:prefix": "postcss dist/css/BshadeUI.css --use=autoprefixer --output=dist/css/BshadeUI.css",
+        "prod:minify": "sass dist/css/BshadeUI.css:dist/css/BshadeUI.min.css --style compressed",
+        "prod": "npm run prod:css && npm run prod:prefix && npm run prod:minify"
+    },
+    "browserslist": [
+        "last 4 version"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/bellshade/bellshade-framework.git"
+    },
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/bellshade/bellshade-framework/issues"
+    },
+    "homepage": "https://github.com/bellshade/bellshade-framework#readme",
+    "dependencies": {
+        "autoprefixer": "^10.3.7",
+        "postcss": "^8.3.9",
+        "postcss-cli": "^9.0.1"
+    },
+    "devDependencies": {
+        "sass": "^1.42.1"
+    }
+}

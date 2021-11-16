@@ -1,0 +1,80 @@
+@mixin padding($direction: false, $unit: rem, $sumbu: false, $screen: false) {
+    $prefix: "";
+    @if $screen != false {
+        $prefix: $screen + "\\:";
+    }
+
+    @if $sumbu == false {
+        @for $i from 0 to 101 {
+            $num: calc($i / 10);
+            $class-num: str-replace("#{$num}", ".", "\\.");
+            $slice: str-slice($class-num, 1, 4);
+
+            @if $direction == false {
+                .#{$prefix}p-#{$slice} {
+                    padding: $num + $unit !important;
+                }
+            } @else if $direction == t {
+                .#{$prefix}pt-#{$slice} {
+                    padding-top: $num + $unit !important;
+                }
+            } @else if $direction == b {
+                .#{$prefix}pb-#{$slice} {
+                    padding-bottom: $num + $unit !important;
+                }
+            } @else if $direction == l {
+                .#{$prefix}pl-#{$slice} {
+                    padding-left: $num + $unit !important;
+                }
+            } @else if $direction == r {
+                .#{$prefix}pr-#{$slice} {
+                    padding-right: $num + $unit !important;
+                }
+            }
+        }
+    } @else {
+        @for $i from 0 to 101 {
+            $num: calc($i / 10);
+            $class-num: str-replace("#{$num}", ".", "\\.");
+            $slice: str-slice($class-num, 1, 4);
+
+            @if $sumbu == x {
+                .#{$prefix}px-#{$slice} {
+                    padding-left: $num + $unit !important;
+                    padding-right: $num + $unit !important;
+                }
+            } @else if $sumbu == y {
+                .#{$prefix}py-#{$slice} {
+                    padding-top: $num + $unit !important;
+                    padding-bottom: $num + $unit !important;
+                }
+            }
+        }
+    }
+}
+
+// Positif
+@include padding();
+@include padding(t);
+@include padding(b);
+@include padding(l);
+@include padding(r);
+
+// Sumbu
+@include padding($sumbu: x);
+@include padding($sumbu: y);
+
+// Padding pada breakpoint tertentu
+@each $key, $value in $breakpoints {
+    @include screen($key) {
+        @include padding($screen: $key);
+        @include padding(t, $screen: $key);
+        @include padding(b, $screen: $key);
+        @include padding(l, $screen: $key);
+        @include padding(r, $screen: $key);
+
+        // Sumbu
+        @include padding($sumbu: x, $screen: $key);
+        @include padding($sumbu: y, $screen: $key);
+    }
+}

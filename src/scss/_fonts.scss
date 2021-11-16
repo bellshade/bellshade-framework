@@ -1,0 +1,176 @@
+// Membuat Text Color
+@mixin text-color($colors, $prefix: "") {
+    @each $key, $value in $colors {
+        .#{$prefix}color-#{$key} {
+            color: $value;
+        }
+    }
+}
+// Text Decoration Color
+@mixin text-decoration-color($colors, $prefix: "") {
+    @each $key, $value in $colors {
+        .#{$prefix}decoration-#{$key} {
+            text-decoration-color: $value;
+        }
+    }
+}
+
+@mixin fonts($prefix: "") {
+    .#{$prefix}color-white {
+        color: $white;
+    }
+    .#{$prefix}color-black {
+        color: $black;
+    }
+
+    // Melakukan perulangan untuk semua warna
+    @each $key, $value in $colors {
+        @include text-color($value, $prefix);
+    }
+
+    // Font Family
+    $font-family: (
+        "serif": (
+            system-ui,
+            -apple-system,
+            "Segoe UI",
+            Roboto,
+            "Helvetica Neue",
+            Arial,
+            "Noto Sans",
+            "Liberation Sans",
+            sans-serif,
+            "Apple Color Emoji",
+            "Segoe UI Emoji",
+            "Segoe UI Symbol",
+            "Noto Color Emoji"
+        ),
+        "mono": (
+            SFMono-Regular,
+            Menlo,
+            Monaco,
+            Consolas,
+            "Liberation Mono",
+            "Courier New",
+            monospace
+        ),
+        "poppins": (
+            "Poppins",
+            sans-serif
+        ),
+        "inter": (
+            "Inter",
+            sans-serif
+        ),
+        "nunito": (
+            "Nunito",
+            sans-serif
+        ),
+        "montserrat": (
+            "montserrat",
+            sans-serif
+        ),
+        "amiri": (
+            "Amiri",
+            sans-serif
+        )
+    ) !default;
+
+    @each $key, $value in $font-family {
+        .#{$prefix}font-#{$key} {
+            font-family: $value;
+        }
+    }
+
+    // Font Weight
+    $font-weight: (
+        100,
+        200,
+        300,
+        400,
+        500,
+        600,
+        700,
+        800,
+        900,
+        bold,
+        bolder,
+        lighter,
+        inherit,
+        initial
+    ) !default;
+    @each $fw in $font-weight {
+        .#{$prefix}fw-#{$fw} {
+            font-weight: $fw;
+        }
+    }
+
+    // Font Size
+    $text-size: (
+        "xs": 0.75,
+        "sm": 0.875,
+        "base": 1,
+        "lg": 1.125,
+        "xl": 1.25,
+        "2xl": 1.5,
+        "3xl": 1.875,
+        "4xl": 2.25,
+        "5xl": 3,
+        "6xl": 3.75,
+        "7xl": 4.5,
+        "8xl": 6,
+        "9xl": 8
+    ) !default;
+    @each $key, $value in $text-size {
+        .#{$prefix}text-#{$key} {
+            font-size: $value + rem;
+        }
+    }
+
+    // Text decoration
+    $text-decoration: (
+        "strike": line-through,
+        "none": none,
+        "overline": overline,
+        "underline": underline,
+        "over-under": overline underline
+    ) !default;
+    @each $key, $value in $text-decoration {
+        .#{$prefix}text-decoration-#{$key} {
+            text-decoration-line: $value;
+        }
+    }
+
+    // Text Decoration Style
+    $text-decoration-style: (
+        dashed,
+        dotted,
+        double,
+        inherit,
+        initial,
+        solid,
+        wavy
+    ) !default;
+
+    @each $tds in $text-decoration-style {
+        .#{$prefix}decoration-#{$tds} {
+            text-decoration-style: $tds;
+        }
+    }
+
+    // Membuat text decoration
+    @each $key, $value in $colors {
+        @include text-decoration-color($value, $prefix);
+    }
+}
+
+// Tanpa breakpoint
+@include fonts();
+
+// Dengan breakpoint
+@each $key, $value in $breakpoints {
+    $prefix: $key + "\\:";
+    @include screen($key) {
+        @include fonts($prefix);
+    }
+}

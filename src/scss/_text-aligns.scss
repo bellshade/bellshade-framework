@@ -1,0 +1,23 @@
+@mixin text-align($prefix: "") {
+    $text-align-values: (
+        center,
+        left,
+        right,
+        justify
+    ) !default;
+
+    @each $value in $text-align-values {
+        .#{$prefix}text-#{$value} {
+            text-align: $value;
+        }
+    }
+}
+
+@include text-align();
+
+@each $key, $value in $breakpoints { 
+    $prefix: $key + "\\:"; 
+    @include screen($key) { 
+        @include text-align($prefix); 
+    } 
+} 
